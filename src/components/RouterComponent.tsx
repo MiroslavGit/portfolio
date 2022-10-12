@@ -7,6 +7,7 @@ import Contact from "../pages/Contact";
 import Social from "../pages/Social";
 
 import "./backgroundAnimation.css";
+
 const RouterComponent = () => {
   return (
     <>

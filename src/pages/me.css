@@ -1,7 +1,4 @@
-.vertical-nav {
-  background-color: rgb(0, 163, 228);
-  width: 200px;
-  height: 100%;
-  padding: 0 30px 0 30px;
-  text-align: center;
+.body-page {
+  height: 100vh;
+  display: flex;
 }

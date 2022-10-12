@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
+
+import VerticalNav from "../components/VerticalNav";
+
 import "./me.css";
 
 function Me() {
   return (
     <div className="body-page">
-      <div className="vertical-nav">NAVIGATION</div>
-      <div className="main">Main</div>
+      <VerticalNav />
+      <div className="main">Me</div>
     </div>
   );
 }
