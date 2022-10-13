@@ -8,7 +8,12 @@ function Me() {
   return (
     <div className="body-page">
       <VerticalNav />
-      <div className="main">Me</div>
+      <div className="main">
+        <h1>Ahoj</h1>
+        <h1>Ahoj</h1>
+        <h1>Ahoj</h1>
+        <h1>Ahoj</h1>
+      </div>
     </div>
   );
 }
