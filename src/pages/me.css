@@ -1,8 +1,8 @@
 .body-page {
   height: 100vh;
+  position: relative;
 }
 
 .main {
-  background-color: rgba(112, 112, 112, 0.507);
   height: 100vh;
 }
