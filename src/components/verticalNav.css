@@ -63,6 +63,8 @@ nav {
   left: -260px;
   z-index: 999;
   background-color: rgba(139, 139, 139, 0.555);
+  display: flex;
+  justify-content: center;
 }
 nav > span {
   height: 60px;
@@ -76,37 +78,65 @@ nav > span {
   left: 260px;
   line-height: 60px;
 }
-nav ul h1 {
-  text-transform: uppercase;
-  text-align: center;
-  margin: 23px 0;
-}
-nav ul li a {
-  text-decoration: none;
-  color: #f7f7f7;
-  text-transform: capitalize;
+nav ul img {
+  border-radius: 50%;
+  margin: 23px 0 50px 0;
+  width: 140px;
+  height: 150px;
+  box-shadow: 8px 8px 20px #6a759b;
+  cursor: pointer;
 }
 nav .parent > li {
   list-style-type: none;
   text-align: center;
   line-height: 70px;
   cursor: pointer;
-  border-bottom: 1px solid #2c3e50;
-}
-nav .parent > li:hover {
-  background-color: #1abc9c;
-  color: #f7f7f7;
-}
-nav ul li ul.child {
-  width: 100% !important;
-  display: none;
-}
-nav ul li ul.child > li {
-  background-color: #34495e;
-  color: #fff;
+  box-shadow: 5px 5px 25px #6a759b42;
+  border-radius: 15px;
+  margin-bottom: 20px;
 }
 
-/* Section Style 
+/* Underline Animation 
+*********************/
+a {
+  position: relative;
+  font-size: 22px;
+  color: #e7ebe6;
+}
+
+/* If can't use ::after, use selector: a .underline*/
+a .underline {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 12px;
+  width: 80%;
+  height: 38px;
+
+  /* Use an SVG URL encoder to get content for the CSS background-image; 
+  e.g: https://codepen.io/yoksel/pen/MWKeKK */
+  background-image: url("../assets/underline_vektor.png");
+  background-repeat: no-repeat;
+  background-size: 100% 20px;
+  background-position: 0px 19px;
+}
+
+.animation-mask {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  width: 100%;
+  height: 20px;
+  background-color: rgba(139, 139, 139, 0.555);
+  transition: all 0.7s ease;
+}
+
+a:hover .animation-mask,
+a:focus .animation-mask {
+  width: 0%;
+}
+
+/* Section z hora ta lyšta Style 
 *********************/
 section {
   position: absolute;
@@ -121,7 +151,7 @@ section {
   transition: all 0.7s ease;
 }
 
-/* Event Style
+/* Event Styles v reacte ked 3x className pridavam v onClick či jak 
 *********************/
 .openMenu {
   background-color: #a5c8ec;
@@ -129,4 +159,7 @@ section {
 }
 .openSection {
   top: 0;
+}
+.animation-mask-color-after {
+  background-color: #a5c8ec;
 }

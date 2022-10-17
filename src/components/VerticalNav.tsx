@@ -1,15 +1,24 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
+
 import "./verticalNav.css";
+import logo from "../assets/logo_1.png";
 
 function VerticalNav() {
+  const navigate = useNavigate();
+
   const [navClass, setnavClass] = useState("");
-  const [sectionCLass, setSelectionCLass] = useState("");
+  const [sectionClass, setSelectionCLass] = useState("");
+  const [animationMaskClass, setAnimationMaskClass] = useState("");
 
   const setClasses = () => {
     navClass == "openMenu" ? setnavClass("") : setnavClass("openMenu");
-    sectionCLass == "openSection"
+    sectionClass == "openSection"
       ? setSelectionCLass("")
       : setSelectionCLass("openSection");
+    navClass == "openMenu"
+      ? setAnimationMaskClass("")
+      : setAnimationMaskClass("animation-mask-color-after");
   };
 
   return (
@@ -21,26 +30,87 @@ function VerticalNav() {
           <span></span>
         </span>
         <ul className="parent">
-          <h1>Nav menu</h1>
-          <li>
-            <a href="#">home</a>
+          <img
+            src={logo}
+            onClick={() => {
+              navigate("/");
+            }}
+            alt="Miroslav Hanisko"
+          />
+          <li
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            <a>
+              &nbsp;&nbsp;&nbsp;&nbsp; Home &nbsp;&nbsp;&nbsp;&nbsp;
+              <span className="underline" aria-hidden="true"></span>
+              <span
+                className={`animation-mask ${animationMaskClass}`}
+                aria-hidden="true"
+              ></span>
+            </a>
           </li>
-          <li>
-            <a href="#">about</a>
+          <li
+            onClick={() => {
+              navigate("/mywork");
+            }}
+          >
+            <a>
+              &nbsp;&nbsp;&nbsp;&nbsp; My Work &nbsp;&nbsp;&nbsp;&nbsp;
+              <span className="underline" aria-hidden="true"></span>
+              <span
+                className={`animation-mask ${animationMaskClass}`}
+                aria-hidden="true"
+              ></span>
+            </a>
           </li>
-          <li>
-            <a href="#">blog</a>
+          <li
+            onClick={() => {
+              navigate("/myskills");
+            }}
+          >
+            <a>
+              &nbsp;&nbsp;&nbsp;&nbsp; My Skills &nbsp;&nbsp;&nbsp;&nbsp;
+              <span className="underline" aria-hidden="true"></span>
+              <span
+                className={`animation-mask ${animationMaskClass}`}
+                aria-hidden="true"
+              ></span>
+            </a>
           </li>
-          <li>
-            <a href="#">sigup</a>
+          <li
+            onClick={() => {
+              navigate("/contact");
+            }}
+          >
+            <a>
+              &nbsp;&nbsp;&nbsp;&nbsp; Contact &nbsp;&nbsp;&nbsp;&nbsp;
+              <span className="underline" aria-hidden="true"></span>
+              <span
+                className={`animation-mask ${animationMaskClass}`}
+                aria-hidden="true"
+              ></span>
+            </a>
           </li>
-          <li>
-            <a href="#">login</a>
+          <li
+            onClick={() => {
+              navigate("/social");
+            }}
+          >
+            <a>
+              &nbsp;&nbsp;&nbsp;&nbsp; Social &nbsp;&nbsp;&nbsp;&nbsp;
+              <span className="underline" aria-hidden="true"></span>
+              <span
+                className={`animation-mask ${animationMaskClass}`}
+                aria-hidden="true"
+              ></span>
+            </a>
           </li>
         </ul>
       </nav>
 
-      <section className={sectionCLass}></section>
+      <section className={sectionClass}></section>
     </>
   );
 }
