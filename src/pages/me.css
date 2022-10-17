@@ -3,6 +3,31 @@
   position: relative;
 }
 
-.main {
-  height: 100vh;
+.bouncing-div {
+  padding-top: 100px;
+}
+
+.pismeno {
+  font-size: 5rem;
+  color: white;
+  font-weight: bold;
+  height: 85px;
+  line-height: 85px;
+  transform: perspective(1px) translateZ(0);
+  transition-duration: 0.7s;
+  opacity: 0;
+  margin-right: 10px;
+}
+
+.pismeno.show {
+  opacity: 5;
+  transition-duration: 0.7s;
+}
+
+.pismeno:hover,
+.pismeno:focus,
+.pismeno:active {
+  transform: scale(8.2, 0.8);
+  color: #21273d;
+  transition-timing-function: cubic-bezier(0.6, 3, 0, -1.36);
 }
