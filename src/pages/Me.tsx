@@ -33,8 +33,8 @@ function Me() {
       exit={{ y: window.innerHeight, transition: { duration: 0.8 } }}
       className="body-page"
     >
-      <div style={{ display: "flex" }}>
-        <div className="bouncing-div">
+      <div style={{ display: "flex", marginBottom: "50px" }}>
+        <div>
           <div style={{ display: "flex" }}>
             <span className="pismeno">H</span>
             <span className="pismeno">i</span>
@@ -78,6 +78,13 @@ function Me() {
             <img className="gradient-ring-logo" src={logo} />
           </div>
         </div>
+      </div>
+
+      <div className="popis-div">
+        <hr className="hr" />
+        <h2 className="popis">
+          Currently Part-time developer but soon Full stack developer ;)
+        </h2>
       </div>
     </motion.div>
   );

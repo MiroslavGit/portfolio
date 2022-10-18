@@ -1,11 +1,5 @@
 .body-page {
-  height: 100vh;
   position: absolute;
-  width: 100%;
-}
-
-/* Bouncing letters */
-.bouncing-div {
   padding-top: 110px;
   padding-left: 220px;
 }
@@ -36,8 +30,8 @@
 /* Gradient Ring */
 .gradient-ring {
   position: relative;
-  top: 150px;
-  left: 35%;
+  top: 50px;
+  left: 65%;
 }
 
 .outer-ring {
@@ -85,4 +79,17 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Popis */
+.popis-div {
+  width: 800px;
+}
+
+.hr {
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+.popis {
+  color: #b9d4f1;
 }
