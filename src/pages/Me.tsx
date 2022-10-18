@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 
 import VerticalNav from "../components/VerticalNav";
 
+import logo from "../assets/logo_1.png";
+
 import "./me.css";
 
 function Me() {
@@ -29,41 +31,50 @@ function Me() {
     <div className="body-page">
       <VerticalNav />
 
-      <div className="bouncing-div">
-        <div>
-          <span className="pismeno">H</span>
-          <span className="pismeno">i</span>
-          <span className="pismeno">,</span>
+      <div style={{ display: "flex" }}>
+        <div className="bouncing-div">
+          <div style={{ display: "flex" }}>
+            <span className="pismeno">H</span>
+            <span className="pismeno">i</span>
+            <span className="pismeno">,</span>
+          </div>
+          <div style={{ display: "flex" }}>
+            <span className="pismeno">I</span>
+            <span className="pismeno">'</span>
+            <span className="pismeno">m</span>
+            <span className="pismeno "> &nbsp;</span>
+            <span className="pismeno ">M</span>
+            <span className="pismeno ">i</span>
+            <span className="pismeno ">r</span>
+            <span className="pismeno ">o</span>
+            <span className="pismeno ">s</span>
+            <span className="pismeno ">l</span>
+            <span className="pismeno ">a</span>
+            <span className="pismeno ">v</span>
+            <span className="pismeno ">,</span>
+          </div>
+          <div style={{ display: "flex" }}>
+            <span className="pismeno ">w</span>
+            <span className="pismeno ">e</span>
+            <span className="pismeno ">b</span>
+            <span className="pismeno ">&nbsp; </span>
+            <span className=" pismeno ">d</span>
+            <span className=" pismeno ">e</span>
+            <span className=" pismeno ">v</span>
+            <span className=" pismeno ">e</span>
+            <span className=" pismeno ">l</span>
+            <span className=" pismeno ">o</span>
+            <span className=" pismeno ">p</span>
+            <span className=" pismeno ">e</span>
+            <span className=" pismeno ">r</span>
+          </div>
         </div>
-        <div>
-          <span className="pismeno">I</span>
-          <span className="pismeno">'</span>
-          <span className="pismeno">m</span>
-          <span className="pismeno "> </span>
-          <span className="pismeno ">M</span>
-          <span className="pismeno ">i</span>
-          <span className="pismeno ">r</span>
-          <span className="pismeno ">o</span>
-          <span className="pismeno ">s</span>
-          <span className="pismeno ">l</span>
-          <span className="pismeno ">a</span>
-          <span className="pismeno ">v</span>
-          <span className="pismeno ">,</span>
-        </div>
-        <div>
-          <span className="pismeno ">w</span>
-          <span className="pismeno ">e</span>
-          <span className="pismeno ">b</span>
-          <span className="pismeno "> </span>
-          <span className=" pismeno ">d</span>
-          <span className=" pismeno ">e</span>
-          <span className=" pismeno ">v</span>
-          <span className=" pismeno ">e</span>
-          <span className=" pismeno ">l</span>
-          <span className=" pismeno ">o</span>
-          <span className=" pismeno ">p</span>
-          <span className=" pismeno ">e</span>
-          <span className=" pismeno ">r</span>
+
+        <div className="gradient-ring">
+          <div className="outer-ring center"></div>
+          <div className="inner-ring center">
+            <img className="gradient-ring-logo" src={logo} />
+          </div>
         </div>
       </div>
     </div>

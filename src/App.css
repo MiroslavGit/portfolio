@@ -1,9 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap");
 * {
   padding: 0;
   margin: 0;
-}
-
-#root {
-  flex: 1;
-  height: 100vh;
+  font-family: "Fuzzy Bubbles", cursive;
 }
