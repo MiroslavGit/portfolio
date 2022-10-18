@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-
-import VerticalNav from "../components/VerticalNav";
+import { motion } from "framer-motion";
 
 import logo from "../assets/logo_1.png";
 
@@ -28,9 +27,12 @@ function Me() {
   }, []);
 
   return (
-    <div className="body-page">
-      <VerticalNav />
-
+    <motion.div
+      initial={{ y: -500 }}
+      animate={{ y: 0, transition: { duration: 0.8 } }}
+      exit={{ y: window.innerHeight, transition: { duration: 0.8 } }}
+      className="body-page"
+    >
       <div style={{ display: "flex" }}>
         <div className="bouncing-div">
           <div style={{ display: "flex" }}>
@@ -77,7 +79,7 @@ function Me() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

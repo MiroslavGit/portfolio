@@ -149,6 +149,7 @@ section {
   background-color: #21273d;
   opacity: 0.75;
   transition: all 0.7s ease;
+  z-index: 1;
 }
 
 /* Event Styles v reacte ked 3x className pridavam v onClick či jak 

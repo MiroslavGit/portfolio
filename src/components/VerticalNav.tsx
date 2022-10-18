@@ -33,13 +33,13 @@ function VerticalNav() {
           <img
             src={logo}
             onClick={() => {
-              navigate("/");
+              setClasses(), navigate("/");
             }}
             alt="Miroslav Hanisko"
           />
           <li
             onClick={() => {
-              navigate("/");
+              setClasses(), navigate("/");
             }}
           >
             <a>
@@ -53,7 +53,7 @@ function VerticalNav() {
           </li>
           <li
             onClick={() => {
-              navigate("/mywork");
+              setClasses(), navigate("/mywork");
             }}
           >
             <a>
@@ -67,7 +67,7 @@ function VerticalNav() {
           </li>
           <li
             onClick={() => {
-              navigate("/myskills");
+              setClasses(), navigate("/myskills");
             }}
           >
             <a>
@@ -81,7 +81,7 @@ function VerticalNav() {
           </li>
           <li
             onClick={() => {
-              navigate("/contact");
+              setClasses(), navigate("/contact");
             }}
           >
             <a>
@@ -95,7 +95,7 @@ function VerticalNav() {
           </li>
           <li
             onClick={() => {
-              navigate("/social");
+              setClasses(), navigate("/social");
             }}
           >
             <a>
@@ -110,7 +110,12 @@ function VerticalNav() {
         </ul>
       </nav>
 
-      <section className={sectionClass}></section>
+      <section
+        className={sectionClass}
+        onClick={() => {
+          setClasses(), navigate("/social");
+        }}
+      ></section>
     </>
   );
 }
