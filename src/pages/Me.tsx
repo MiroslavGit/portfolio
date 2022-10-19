@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router";
 
 import logo from "../assets/logo_1.png";
 
 import "./me.css";
 
 function Me() {
+  const navigate = useNavigate();
   const dataFetchedRef = useRef(false);
 
   const addShowClassToLetters = () => {
@@ -83,9 +85,39 @@ function Me() {
       <div className="popis-div">
         <hr className="hr" />
         <h2 className="popis">
-          Currently Part-time developer but soon Full stack developer ;)
+          Currently Part-time developer and student but soon Full time developer
         </h2>
       </div>
+
+      <h2 className="popis" style={{ marginTop: "100px", color: "white" }}>
+        You can check my skills and what can I did up to now...
+      </h2>
+      <a
+        className="button"
+        onClick={() => {
+          navigate("/myskills");
+        }}
+      >
+        <span>Show Skills</span>
+        <div className="icon ">
+          <i className="fa fa-remove">{"->"}</i>
+        </div>
+      </a>
+      <h2 className="popis" style={{ marginTop: "80px", color: "white" }}>
+        ...or if all of these animations little impressed you a bit, then don't
+        waste your time and contact me directly ;)
+      </h2>
+      <a
+        className="button"
+        onClick={() => {
+          navigate("/contact");
+        }}
+      >
+        <span>Contact Me</span>
+        <div className="icon ">
+          <i className="fa fa-remove">{"->"}</i>
+        </div>
+      </a>
     </motion.div>
   );
 }
