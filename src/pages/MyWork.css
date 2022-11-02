@@ -1,0 +1,81 @@
+.galleryContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 110px;
+  width: 100%;
+  justify-content: space-around;
+}
+.border {
+  height: 345px;
+  width: 275px;
+  background: transparent;
+  border-radius: 10px;
+  transition: border 1s;
+  position: relative;
+}
+.border:hover {
+  border: 1px solid #fff;
+}
+.card {
+  height: 379px;
+  width: 300px;
+  border-radius: 10px;
+  transition: 0.8s;
+  overflow: hidden;
+  box-shadow: 0 70px 63px -60px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-right: 30px;
+}
+.card0 {
+  background: url("https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg")
+    center center no-repeat;
+  background-size: 300px;
+}
+.card0:hover {
+  background: url("https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg")
+    left center no-repeat;
+  background-size: 600px;
+}
+.card0:hover h2 {
+  opacity: 1;
+}
+
+h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+  margin: 20px;
+  opacity: 1; /*zmen to bo nikde neuvidis #popis xd */
+  transition: opacity 1s;
+}
+
+.icons {
+  position: absolute;
+  height: 130px;
+  top: 226px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.iconsButton {
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  padding-top: 5px;
+  background-color: rgb(50, 49, 49);
+  box-shadow: 0 70px 63px -60px #000;
+  width: 40px;
+  transition: 0.8s;
+}
+
+.iconsButton:hover {
+  width: 120px;
+  margin-left: 80px;
+  background-color: rgb(203, 203, 203);
+  color: rgb(50, 49, 49);
+}

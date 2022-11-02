@@ -48,10 +48,11 @@
   background-image: linear-gradient(0deg, #36295e, #1c1045);
   border-radius: 50%;
   margin-top: -290px;
-  z-index: 5;
+  z-index: 0;
 }
 
 .gradient-ring-logo {
+  position: relative;
   border-radius: 3000px;
   margin: 5px 0 0 5px;
   height: 270px;
@@ -82,7 +83,7 @@
   border-radius: 5px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
   transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-  margin-top: 10px;
+  margin-top: 30px;
 }
 .button span,
 .button .icon {

@@ -90,7 +90,7 @@ function Me() {
       </div>
 
       <h2 className="popis" style={{ marginTop: "100px", color: "white" }}>
-        You can check my skills and what can I did up to now...
+        You can check my skills and what I did up to now...
       </h2>
       <a
         className="button"
@@ -99,21 +99,6 @@ function Me() {
         }}
       >
         <span>Show Skills</span>
-        <div className="icon ">
-          <i className="fa fa-remove">{"->"}</i>
-        </div>
-      </a>
-      <h2 className="popis" style={{ marginTop: "80px", color: "white" }}>
-        ...or if all of these animations little impressed you a bit, then don't
-        waste your time and contact me directly ;)
-      </h2>
-      <a
-        className="button"
-        onClick={() => {
-          navigate("/contact");
-        }}
-      >
-        <span>Contact Me</span>
         <div className="icon ">
           <i className="fa fa-remove">{"->"}</i>
         </div>

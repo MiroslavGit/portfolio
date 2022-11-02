@@ -1,7 +1,7 @@
 .background {
   width: 100%;
   background: #6a759b;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   overflow: hidden;
 }

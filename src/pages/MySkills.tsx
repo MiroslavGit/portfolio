@@ -1,9 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router";
 
 import "./me.css";
 
 function MySkills() {
+  const navigate = useNavigate();
+
   const dataFetchedRef = useRef(false);
 
   const addShowClassToLetters = () => {
@@ -49,9 +52,17 @@ function MySkills() {
 
       <div className="popis-div">
         <hr className="hr" />
-        <h2 className="popis">
-          Currently Part-time developer but soon Full stack developer ;)
-        </h2>
+        <a
+          className="button"
+          onClick={() => {
+            navigate("/contact");
+          }}
+        >
+          <span>Contact Me</span>
+          <div className="icon ">
+            <i className="fa fa-remove">{"->"}</i>
+          </div>
+        </a>
       </div>
     </motion.div>
   );

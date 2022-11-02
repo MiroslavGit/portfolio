@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-import "./me.css";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+
+import "./MyWork.css";
 
 function MyWork() {
   const dataFetchedRef = useRef(false);
@@ -47,9 +49,97 @@ function MyWork() {
 
       <div className="popis-div">
         <hr className="hr" />
-        <h2 className="popis">
-          Currently Part-time developer but soon Full stack developer ;)
+        <h2 className="popis" style={{ marginTop: "80px", color: "white" }}>
+          If this piece of my work impressed you a bit, then don't waste your
+          time and contact me directly ;)
         </h2>
+      </div>
+
+      <div>
+        <div className="galleryContainer">
+          <div className="card card0">
+            <div className="border">
+              <h2>Al Pacino</h2>
+              <div className="icons">
+                <button className="iconsButton">
+                  <ArrowOutwardIcon />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="card card0">
+            <div className="border">
+              <h2>Al Pacino</h2>
+              <div className="icons">
+                <button className="iconsButton">
+                  <ArrowOutwardIcon />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="card card0">
+            <div className="border">
+              <h2>Al Pacino</h2>
+              <div className="icons">
+                <button className="iconsButton">
+                  <ArrowOutwardIcon />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="card card0">
+            <div className="border">
+              <h2>Al Pacino</h2>
+              <div className="icons">
+                <button className="iconsButton">
+                  <ArrowOutwardIcon />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="galleryContainer">
+          <div className="card card0">
+            <div className="border">
+              <h2>Al Pacino</h2>
+              <div className="icons">
+                <button className="iconsButton">
+                  <ArrowOutwardIcon />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="card card0">
+            <div className="border">
+              <h2>Al Pacino</h2>
+              <div className="icons">
+                <button className="iconsButton">
+                  <ArrowOutwardIcon />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="card card0">
+            <div className="border">
+              <h2>Al Pacino</h2>
+              <div className="icons">
+                <button className="iconsButton">
+                  <ArrowOutwardIcon />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="card card0">
+            <div className="border">
+              <h2>Al Pacino</h2>
+              <div className="icons">
+                <button className="iconsButton">
+                  <ArrowOutwardIcon />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </motion.div>
   );
