@@ -7,6 +7,7 @@
   width: 100%;
   margin: 0 0 10px 0;
 }
+
 .popis {
   color: #b9d4f1;
 }
@@ -23,19 +24,16 @@
   left: calc(50% - 150px);
   height: 300px;
   width: 300px;
-  background-image: linear-gradient(
-    135deg,
-    #f1f6f8 0%,
-    #b9d4f1 5%,
-    #6a759b 15%,
-    #2fe3fe 50%,
-    #be2727 100%
-  );
+  background-image: linear-gradient(135deg,
+      #f1f6f8 0%,
+      #b9d4f1 5%,
+      #6a759b 15%,
+      #2fe3fe 50%,
+      #be2727 100%);
   border-radius: 50%;
-  z-index: 0;
 
   /*  Rotate  */
-  animation-duration: 2s;
+  animation-duration: 5s;
   animation-name: rotate;
   animation-iteration-count: infinite;
 }
@@ -48,7 +46,6 @@
   background-image: linear-gradient(0deg, #36295e, #1c1045);
   border-radius: 50%;
   margin-top: -290px;
-  z-index: 0;
 }
 
 .gradient-ring-logo {
@@ -63,12 +60,11 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
-
-/* Buttons */
 
 /* Main Styles */
 .button {
@@ -85,6 +81,7 @@
   transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
   margin-top: 30px;
 }
+
 .button span,
 .button .icon {
   display: block;
@@ -93,6 +90,7 @@
   position: absolute;
   top: 0;
 }
+
 .button span {
   width: 72%;
   line-height: inherit;
@@ -101,6 +99,7 @@
   left: 0;
   transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
 }
+
 .button span:after {
   content: "";
   background-color: #6a759b;
@@ -110,16 +109,19 @@
   top: 15%;
   right: -1px;
 }
+
 .button .icon {
   width: 28%;
   right: 0;
   transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
 }
+
 .button .icon .fa {
   font-size: 30px;
   vertical-align: middle;
   transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4), height 0.25s ease;
 }
+
 .button .icon .fa-remove {
   height: 36px;
 }

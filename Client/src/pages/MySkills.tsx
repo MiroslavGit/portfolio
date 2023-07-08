@@ -32,7 +32,7 @@ function MySkills() {
       initial={{ y: -500 }}
       animate={{ y: 0, transition: { duration: 0.8 } }}
       exit={{ y: window.innerHeight, transition: { duration: 0.8 } }}
-      className="body-page"
+      className="childPage"
     >
       <div style={{ display: "flex", marginBottom: "50px" }}>
         <div>

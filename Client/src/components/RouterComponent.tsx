@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root">
+import { BrowserRouter as Router } from "react-router-dom";
+
+import VerticalNav from "./VerticalNav";
+import AnimatedRoutes from "./AnimatedRoutes";
+
+import "./backgroundAnimation.css";
+
+const RouterComponent = () => {
+  return (
+    <div className="container">
       <div className="background">
         <span></span>
         <span></span>
@@ -30,8 +30,13 @@
         <span></span>
         <span></span>
       </div>
-    </div>
 
-    <script type="module" src="/src/index.tsx"></script>
-  </body>
-</html>
+      <Router>
+        <VerticalNav />
+        <AnimatedRoutes />
+      </Router>
+    </div>
+  );
+};
+
+export default RouterComponent;

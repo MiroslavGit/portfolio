@@ -33,7 +33,7 @@ function Me() {
       initial={{ y: -500 }}
       animate={{ y: 0, transition: { duration: 0.8 } }}
       exit={{ y: window.innerHeight, transition: { duration: 0.8 } }}
-      className="body-page"
+      className="childPage"
     >
       <div style={{ display: "flex", marginBottom: "50px" }}>
         <div>
@@ -85,7 +85,7 @@ function Me() {
       <div className="popis-div">
         <hr className="hr" />
         <h2 className="popis">
-          Currently Part-time developer and student but soon Full time developer
+          Currently Part-time developer & student but soon Full time & Fullstack developer ;&#41;
         </h2>
       </div>
 
@@ -94,11 +94,9 @@ function Me() {
       </h2>
       <a
         className="button"
-        onClick={() => {
-          navigate("/myskills");
-        }}
+        onClick={() => navigate("/myWork")}
       >
-        <span>Show Skills</span>
+        <span>Projects</span>
         <div className="icon ">
           <i className="fa fa-remove">{"->"}</i>
         </div>

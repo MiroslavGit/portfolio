@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import "./me.css";
 
-function Cotact() {
+function Social() {
   const dataFetchedRef = useRef(false);
 
   const addShowClassToLetters = () => {
@@ -29,7 +29,7 @@ function Cotact() {
       initial={{ y: -500 }}
       animate={{ y: 0, transition: { duration: 0.8 } }}
       exit={{ y: window.innerHeight, transition: { duration: 0.8 } }}
-      className="body-page"
+      className="childPage"
     >
       <div style={{ display: "flex", marginBottom: "50px" }}>
         <div>
@@ -37,10 +37,16 @@ function Cotact() {
             <span className="pismeno">C</span>
             <span className="pismeno">o</span>
             <span className="pismeno">n</span>
-            <span className="pismeno">t</span>
-            <span className="pismeno">a</span>
+            <span className="pismeno">n</span>
+            <span className="pismeno">e</span>
             <span className="pismeno">c</span>
             <span className="pismeno">t</span>
+          </div>
+          <div style={{ display: "flex" }}>
+            <span className="pismeno">with</span>
+            <span className="pismeno">&nbsp;</span>
+            <span className="pismeno">m</span>
+            <span className="pismeno">e</span>
           </div>
         </div>
       </div>
@@ -55,4 +61,4 @@ function Cotact() {
   );
 }
 
-export default Cotact;
+export default Social;

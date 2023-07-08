@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -6,8 +13,7 @@
 }
 
 /* Univerzalne CSS lebo na kazdej stranke je to iste */
-
-.body-page {
+.childPage {
   position: absolute;
   padding-top: 110px;
   padding-left: 220px;
@@ -16,12 +22,10 @@
 }
 
 /* Bouncing animated text */
-
 .pismeno {
   font-size: 5rem;
   color: white;
   font-weight: bold;
-
   transition-duration: 0.5s;
   opacity: 0;
   margin-right: 10px;
@@ -36,6 +40,6 @@
 .pismeno:focus,
 .pismeno:active {
   transform: scale(1.2, 1.2);
-  color: #2f3d70;
+  color: #465eb3;
   transition-timing-function: cubic-bezier(1, 3, 0, 1);
 }

@@ -31,7 +31,7 @@ function MyWork() {
       initial={{ y: -500 }}
       animate={{ y: 0, transition: { duration: 0.8 } }}
       exit={{ y: window.innerHeight, transition: { duration: 0.8 } }}
-      className="body-page"
+      className="childPage"
     >
       <div style={{ display: "flex", marginBottom: "50px" }}>
         <div>
@@ -49,14 +49,15 @@ function MyWork() {
 
       <div className="popis-div">
         <hr className="hr" />
-        <h2 className="popis" style={{ marginTop: "80px", color: "white" }}>
+        <h2 className="popis">
           If this piece of my work impressed you a bit, then don't waste your
-          time and contact me directly ;)
+          time and contact me directly
         </h2>
       </div>
 
       <div>
         <div className="galleryContainer">
+
           <div className="card card0">
             <div className="border">
               <h2>Al Pacino</h2>
@@ -67,6 +68,7 @@ function MyWork() {
               </div>
             </div>
           </div>
+
           <div className="card card0">
             <div className="border">
               <h2>Al Pacino</h2>
@@ -77,6 +79,7 @@ function MyWork() {
               </div>
             </div>
           </div>
+
           <div className="card card0">
             <div className="border">
               <h2>Al Pacino</h2>
@@ -87,18 +90,11 @@ function MyWork() {
               </div>
             </div>
           </div>
-          <div className="card card0">
-            <div className="border">
-              <h2>Al Pacino</h2>
-              <div className="icons">
-                <button className="iconsButton">
-                  <ArrowOutwardIcon />
-                </button>
-              </div>
-            </div>
-          </div>
+
         </div>
+
         <div className="galleryContainer">
+
           <div className="card card0">
             <div className="border">
               <h2>Al Pacino</h2>
@@ -109,6 +105,7 @@ function MyWork() {
               </div>
             </div>
           </div>
+
           <div className="card card0">
             <div className="border">
               <h2>Al Pacino</h2>
@@ -119,6 +116,7 @@ function MyWork() {
               </div>
             </div>
           </div>
+
           <div className="card card0">
             <div className="border">
               <h2>Al Pacino</h2>
@@ -129,6 +127,11 @@ function MyWork() {
               </div>
             </div>
           </div>
+
+        </div>
+
+        <div className="galleryContainer">
+
           <div className="card card0">
             <div className="border">
               <h2>Al Pacino</h2>
@@ -139,6 +142,29 @@ function MyWork() {
               </div>
             </div>
           </div>
+
+          <div className="card card0">
+            <div className="border">
+              <h2>Al Pacino</h2>
+              <div className="icons">
+                <button className="iconsButton">
+                  <ArrowOutwardIcon />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="card card0">
+            <div className="border">
+              <h2>Al Pacino</h2>
+              <div className="icons">
+                <button className="iconsButton">
+                  <ArrowOutwardIcon />
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </motion.div>
