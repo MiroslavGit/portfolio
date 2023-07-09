@@ -1,3 +1,6 @@
+@import "../constants/variables.scss";
+@import "../constants/themes.scss";
+
 .galleryContainer {
   display: flex;
   align-items: center;
@@ -50,7 +53,7 @@
 
 h2 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #fff;
+  color: $defaultWhite;
   margin: 20px;
   opacity: 1;
   /*zmen to bo nikde neuvidis #popis xd */
@@ -72,18 +75,19 @@ h2 {
 .iconsButton {
   border-radius: 6px;
   cursor: pointer;
-  color: white;
+  color: $defaultWhite;
   padding-top: 4px;
-  background-color: rgb(136, 129, 129);
+  background-color: $defaultBrown;
   box-shadow: 0 70px 63px -60px #000;
   width: 40px;
   transition: 0.8s;
   border: none;
+  color: $defaultBlack;
 }
 
 .iconsButton:hover {
   width: 120px;
   margin-left: 80px;
-  background-color: rgb(203, 203, 203);
-  color: rgb(50, 49, 49);
+  background-color: $defaultBrown;
+  color: $defaultBlack;
 }

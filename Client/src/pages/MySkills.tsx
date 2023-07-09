@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
 
-import "./me.css";
+import "./me.scss";
 
 function MySkills() {
   const navigate = useNavigate();

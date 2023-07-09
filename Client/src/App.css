@@ -24,7 +24,7 @@ body {
 /* Bouncing animated text */
 .pismeno {
   font-size: 5rem;
-  color: white;
+  color: #D8D2CB;
   font-weight: bold;
   transition-duration: 0.5s;
   opacity: 0;
@@ -40,6 +40,6 @@ body {
 .pismeno:focus,
 .pismeno:active {
   transform: scale(1.2, 1.2);
-  color: #465eb3;
   transition-timing-function: cubic-bezier(1, 3, 0, 1);
+  color: #1C658C
 }

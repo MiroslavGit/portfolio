@@ -1,3 +1,6 @@
+@import "../constants/variables.scss";
+@import "../constants/themes.scss";
+
 /* Hamburger */
 .btn_container {
   left: 60px;
@@ -14,7 +17,7 @@
   width: 50px;
   height: 5px;
   border-radius: 2px;
-  background-color: rgb(255, 255, 255);
+  background-color: $defaultWhite ;
 }
 
 .btn_container span:nth-child(1) {
@@ -62,12 +65,11 @@ nav,
 nav {
   width: 260px;
   height: 100vh;
-  color: #f7f7f7;
+  color: $defaultWhite;
   position: fixed;
   top: 0;
   left: -260px;
   z-index: 999;
-  background-color: rgba(139, 139, 139, 0.555);
   text-align: center;
 }
 
@@ -89,7 +91,7 @@ nav>span {
   margin: 23px 0 50px 0;
   width: 140px;
   height: 150px;
-  box-shadow: 8px 8px 20px #6a759b;
+  box-shadow: 7px 1px 20px $defaultLightBlue;
   cursor: pointer;
 }
 
@@ -103,10 +105,10 @@ nav .parent>li {
   text-align: center;
   line-height: 70px;
   cursor: pointer;
-  box-shadow: 5px 5px 25px #6a759b42;
+  box-shadow: 5px 5px 25px $defaultLightBlue;
   border-radius: 15px;
   margin-bottom: 25px;
-  background-color: #82b1e1;
+  background-color: $defaultLightBlue;
 }
 
 /* Underline Animation 
@@ -114,7 +116,8 @@ nav .parent>li {
 a {
   position: relative;
   font-size: 22px;
-  color: #e7ebe6;
+  color: $defaultWhite;
+  font-weight: bold;
 }
 
 /* If can't use ::after, use selector: a .underline*/
@@ -141,7 +144,6 @@ a .underline {
   right: 0;
   width: 100%;
   height: 20px;
-  background-color: rgba(139, 139, 139, 0.555);
   transition: all 0.7s ease;
 }
 
@@ -150,15 +152,14 @@ a:focus .animation-mask {
   width: 0%;
 }
 
-/* Section z hora ta lyšta Style 
-*********************/
+/* Section z hora lyšta */
 section {
   position: fixed;
   top: -100vh;
   width: 100%;
   height: 100vh;
-  background-color: #080808;
-  opacity: 0.75;
+  background-color: $defaultBrown;
+  opacity: 1;
   transition: all 0.5s ease;
   z-index: 5;
 }
@@ -179,13 +180,13 @@ section {
 .socialIcons {
   width: 75%;
   height: 100%;
-  background-color: #a5c8ec51;
+  background-color: $defaultWhite;
   border-radius: 20px;
 }
 
 /* Event Styles */
 .openMenu {
-  background-color: #a5c8ec;
+  background-color: $defaultDarkBlue;
   left: 0;
 }
 
@@ -205,5 +206,5 @@ section {
 }
 
 .animation-mask-color-after {
-  background-color: #82b1e1;
+  background-color: $defaultLightBlue;
 }

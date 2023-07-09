@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-import "./me.css";
+import "./me.scss";
 
 function Cotact() {
   const dataFetchedRef = useRef(false);

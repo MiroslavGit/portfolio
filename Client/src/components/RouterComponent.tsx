@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import VerticalNav from "./VerticalNav";
 import AnimatedRoutes from "./AnimatedRoutes";
 
-import "./backgroundAnimation.css";
+import './RouterComponent.scss';
 
 const RouterComponent = () => {
   return (

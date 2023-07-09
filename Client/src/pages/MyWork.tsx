@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
-import "./MyWork.css";
+import "./MyWork.scss";
 
 function MyWork() {
   const dataFetchedRef = useRef(false);
@@ -56,80 +56,6 @@ function MyWork() {
       </div>
 
       <div>
-        <div className="galleryContainer">
-
-          <div className="card card0">
-            <div className="border">
-              <h2>Al Pacino</h2>
-              <div className="icons">
-                <button className="iconsButton">
-                  <ArrowOutwardIcon />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="card card0">
-            <div className="border">
-              <h2>Al Pacino</h2>
-              <div className="icons">
-                <button className="iconsButton">
-                  <ArrowOutwardIcon />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="card card0">
-            <div className="border">
-              <h2>Al Pacino</h2>
-              <div className="icons">
-                <button className="iconsButton">
-                  <ArrowOutwardIcon />
-                </button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div className="galleryContainer">
-
-          <div className="card card0">
-            <div className="border">
-              <h2>Al Pacino</h2>
-              <div className="icons">
-                <button className="iconsButton">
-                  <ArrowOutwardIcon />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="card card0">
-            <div className="border">
-              <h2>Al Pacino</h2>
-              <div className="icons">
-                <button className="iconsButton">
-                  <ArrowOutwardIcon />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="card card0">
-            <div className="border">
-              <h2>Al Pacino</h2>
-              <div className="icons">
-                <button className="iconsButton">
-                  <ArrowOutwardIcon />
-                </button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
         <div className="galleryContainer">
 
           <div className="card card0">

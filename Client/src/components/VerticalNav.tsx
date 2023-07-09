@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 
-import "./verticalNav.css";
 import logo from "../assets/logo_1.png";
+
+import "./verticalNav.scss";
 
 function VerticalNav() {
   const navigate = useNavigate();

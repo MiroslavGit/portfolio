@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 
 import logo from "../assets/logo_1.png";
 
-import "./me.css";
+import "./me.scss";
 
 function Me() {
   const navigate = useNavigate();
@@ -89,7 +89,7 @@ function Me() {
         </h2>
       </div>
 
-      <h2 className="popis" style={{ marginTop: "100px", color: "white" }}>
+      <h2 className="popis" style={{ marginTop: "100px" }}>
         You can check my skills and what I did up to now...
       </h2>
       <a
