@@ -49,7 +49,6 @@
   width: 50px;
 }
 
-/*  */
 nav,
 nav .parent>li,
 nav ul li ul.child>li,
@@ -178,9 +177,9 @@ section {
 }
 
 .socialIcons {
-  width: 75%;
+  width: 78%;
   height: 100%;
-  background-color: $defaultWhite;
+  background-color: $transparentWhite;
   border-radius: 20px;
 }
 
@@ -207,4 +206,40 @@ section {
 
 .animation-mask-color-after {
   background-color: $defaultLightBlue;
+}
+
+/* Containter photos  */
+.column {
+  width: 80%;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  position: fixed;
+  bottom: 90px;
+}
+
+
+figure {
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+/* Gray Scale */
+.hover figure img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+.hover figure:hover img {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
 }

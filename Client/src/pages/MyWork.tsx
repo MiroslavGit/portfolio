@@ -28,7 +28,7 @@ function MyWork() {
 
   return (
     <motion.div
-      initial={{ y: -500 }}
+      initial={{ y: -2000 }}
       animate={{ y: 0, transition: { duration: 0.8 } }}
       exit={{ y: window.innerHeight, transition: { duration: 0.8 } }}
       className="childPage"

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 
 import logo from "../assets/logo_1.png";
+import jaFeed from "../assets/ja_feed.png";
 
 import "./verticalNav.scss";
 
@@ -92,6 +93,21 @@ function VerticalNav() {
       >
         <div className="sectionContent">
           <div className="socialIcons">
+
+            <div className="hover column">
+              <div>
+                <figure><img src={jaFeed} /></figure>
+              </div>
+              <div>
+                <figure><img src={jaFeed} /></figure>
+              </div>
+              <div>
+                <figure><img src={jaFeed} /></figure>
+              </div>
+              <div>
+                <figure><img src={jaFeed} /></figure>
+              </div>
+            </div>
 
           </div>
         </div>
