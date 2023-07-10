@@ -33,16 +33,17 @@ function MyWork() {
       exit={{ y: window.innerHeight, transition: { duration: 0.8 } }}
       className="childPage"
     >
-      <div style={{ display: "flex", marginBottom: "50px" }}>
+      <div style={{ marginBottom: "50px" }}>
         <div>
           <div style={{ display: "flex" }}>
-            <span className="pismeno">M</span>
-            <span className="pismeno">y</span>
-            <span className="pismeno">&nbsp;</span>
-            <span className="pismeno">w</span>
-            <span className="pismeno">o</span>
+            <span className="pismeno">P</span>
             <span className="pismeno">r</span>
-            <span className="pismeno">k</span>
+            <span className="pismeno">o</span>
+            <span className="pismeno">j</span>
+            <span className="pismeno">e</span>
+            <span className="pismeno">c</span>
+            <span className="pismeno">t</span>
+            <span className="pismeno">s</span>
           </div>
         </div>
       </div>
@@ -50,8 +51,11 @@ function MyWork() {
       <div className="popis-div">
         <hr className="hr" />
         <h2 className="popis">
-          If this piece of my work impressed you a bit, then don't waste your
-          time and contact me directly
+          If you find any of my work intriguing, don't hesitate to reach out and connect with me.
+          <br /><br />
+          I'm always ready to collaborate on exciting projects and bring new ideas to life.
+          <br /><br />
+          Let's create something amazing together!
         </h2>
       </div>
 

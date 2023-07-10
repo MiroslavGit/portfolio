@@ -4,14 +4,14 @@
 .galleryContainer {
   display: flex;
   align-items: center;
-  margin-top: 110px;
+  margin-top: 120px;
   width: 100%;
   justify-content: space-around;
 }
 
 .border {
-  height: 345px;
-  width: 275px;
+  height: 260px;
+  width: 380px;
   background: transparent;
   position: relative;
   border-radius: 10px;
@@ -24,8 +24,8 @@
 }
 
 .card {
-  height: 379px;
-  width: 300px;
+  height: 300px;
+  width: 440px;
   border-radius: 10px;
   transition: 0.8s;
   overflow: hidden;
@@ -39,12 +39,12 @@
 
 .card0 {
   background: url("https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg") center center no-repeat;
-  background-size: 300px;
+  background-size: 440px;
 }
 
 .card0:hover {
   background: url("https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg") left center no-repeat;
-  background-size: 600px;
+  background-size: 500px;
 }
 
 .card0:hover h2 {
@@ -63,8 +63,8 @@ h2 {
 .icons {
   position: absolute;
   height: 130px;
-  top: 250px;
-  left: 5px;
+  top: 166px;
+  left: 10px;
   width: 50px;
   display: flex;
   flex-direction: column;

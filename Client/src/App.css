@@ -9,13 +9,14 @@ body {
 * {
   padding: 0;
   margin: 0;
-  font-family: "Fuzzy Bubbles", cursive;
+  /*  font-family: "Fuzzy Bubbles", cursive; */
+  letter-spacing: 2px;
 }
 
 /* Univerzalne CSS lebo na kazdej stranke je to iste */
 .childPage {
   position: absolute;
-  padding-top: 110px;
+  padding-top: 70px;
   padding-left: 220px;
   width: 80%;
   height: 100%;
@@ -23,12 +24,16 @@ body {
 
 /* Bouncing animated text */
 .pismeno {
-  font-size: 5rem;
+  font-size: 6.5rem;
   color: #D8D2CB;
   font-weight: bold;
   transition-duration: 0.5s;
   opacity: 0;
   margin-right: 10px;
+}
+
+.pismeno.vacsiePismeno {
+  font-size: 10rem;
 }
 
 .pismeno.show {

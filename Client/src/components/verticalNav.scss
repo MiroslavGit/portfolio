@@ -210,15 +210,11 @@ section {
 
 /* Containter photos  */
 .column {
-  width: 80%;
-  padding: 0;
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  margin-top: 30px;
-  position: fixed;
-  bottom: 90px;
+  margin-top: 28%;
 }
-
 
 figure {
   width: 300px;

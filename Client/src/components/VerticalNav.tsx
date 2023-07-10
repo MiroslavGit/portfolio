@@ -42,7 +42,7 @@ function VerticalNav() {
               onClick={() => { setClasses(), navigate("/") }}
             >
               <a>
-                &nbsp;&nbsp;&nbsp;&nbsp; Home &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp; Introduction &nbsp;&nbsp;&nbsp;&nbsp;
                 <span className="underline"></span>
                 <span className={`animation-mask ${animationMaskClass}`}></span>
               </a>
@@ -51,7 +51,7 @@ function VerticalNav() {
               onClick={() => { setClasses(), navigate("/mywork") }}
             >
               <a>
-                &nbsp;&nbsp;&nbsp;&nbsp; My Work &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp; Projects &nbsp;&nbsp;&nbsp;&nbsp;
                 <span className="underline" ></span>
                 <span className={`animation-mask ${animationMaskClass}`}></span>
               </a>
@@ -60,7 +60,7 @@ function VerticalNav() {
               onClick={() => { setClasses(), navigate("/myskills") }}
             >
               <a>
-                &nbsp;&nbsp;&nbsp;&nbsp; My Skills &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp; Abilities &nbsp;&nbsp;&nbsp;&nbsp;
                 <span className="underline"></span>
                 <span className={`animation-mask ${animationMaskClass}`}></span>
               </a>
@@ -69,7 +69,7 @@ function VerticalNav() {
               onClick={() => { setClasses(), navigate("/contact") }}
             >
               <a>
-                &nbsp;&nbsp;&nbsp;&nbsp; Contact &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp; Get in Touch &nbsp;&nbsp;&nbsp;&nbsp;
                 <span className="underline" aria-hidden="true"></span>
                 <span className={`animation-mask ${animationMaskClass}`}></span>
               </a>
@@ -78,7 +78,7 @@ function VerticalNav() {
               onClick={() => { setClasses(), navigate("/social") }}
             >
               <a>
-                &nbsp;&nbsp;&nbsp;&nbsp; Social &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp; Connect &nbsp;&nbsp;&nbsp;&nbsp;
                 <span className="underline" aria-hidden="true"></span>
                 <span className={`animation-mask ${animationMaskClass}`}></span>
               </a>
