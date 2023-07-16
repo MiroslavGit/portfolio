@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, ChangeEvent, FormEvent } from "react";
 import { motion } from "framer-motion";
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -16,12 +16,21 @@ import "./Connect.scss";
 function Cotact() {
   const dataFetchedRef = useRef(false);
 
-  const [fullnameValue, setFullnameValue] = useState("");
-  const [emailValue, setEmailValue] = useState("");
-  const [messageValue, setMessageValue] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [fullnameValue, setFullnameValue] = useState<string>("");
+  const [emailValue, setEmailValue] = useState<string>("");
+  const [messageValue, setMessageValue] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [errors, setErrors] = useState<{ fullname: boolean; email: boolean; message: boolean }>({
+    fullname: false,
+    email: false,
+    message: false,
+  });
 
-
+  useEffect(() => {
+    if (dataFetchedRef.current) return;
+    dataFetchedRef.current = true;
+    addShowClassToLetters();
+  }, []);
 
   const addShowClassToLetters = () => {
     const allLetters = Array.from(document.getElementsByClassName("pismeno"));
@@ -35,16 +44,35 @@ function Cotact() {
     }, 1000);
   };
 
-  useEffect(() => {
-    if (dataFetchedRef.current) return;
-    dataFetchedRef.current = true;
-    addShowClassToLetters();
-  }, []);
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validInputs = () => {
+    const hasErrors =
+      fullnameValue.trim() === '' ||
+      !validateEmail(emailValue) ||
+      messageValue.trim() === '';
+
+    setErrors({
+      fullname: fullnameValue.trim() === '',
+      email: !validateEmail(emailValue),
+      message: messageValue.trim() === '',
+    });
+
+    return !hasErrors;
+  };
 
   const handleSend = (e: any) => {
     e.preventDefault();
-    setIsLoading(true);
-  }
+
+    const validIpnuts = validInputs();
+
+    if (validIpnuts) {
+      setIsLoading(true);
+    }
+  };
 
   return (
     <motion.div
@@ -71,8 +99,6 @@ function Cotact() {
       <div className="popis-div">
         <hr className="hr" />
         <h2 className="popis">
-          Let's Connect !
-          <br /><br />
           I believe in the power of collaboration and building meaningful connections within the web development community.
           <br /><br />
           Feel free to connect with me on any of these platforms. Whether you have a project idea, career opportunity, or simply want to say hello, I'm here to listen and respond promptly.
@@ -82,78 +108,71 @@ function Cotact() {
       <div className="contact">
         <div className="contact-box">
           <div className="contact-links">
-            <h2>My profiles</h2>
+            <h2>Let's Connect !</h2>
             <div className="links">
               <div className="link">
-                <a><LinkedInIcon className="icon" /> </a>
+                <a href="https://www.linkedin.com/in/miroslav-hanisko-b1abb8223"><LinkedInIcon className="icon" /> </a>
               </div>
               <div className="link">
-                <a><GitHubIcon className="icon" /></a>
+                <a href="https://github.com/MiroslavGit"><GitHubIcon className="icon" /></a>
               </div>
               <div className="link">
-                <a><InstagramIcon className="icon" /></a>
+                <a href="https://www.instagram.com/ten_mirek_"><InstagramIcon className="icon" /></a>
               </div>
               <div className="link">
-                <a><EmailIcon className="icon" /></a>
+                <a href="mailto:miroslav2022@gmail.com"><EmailIcon className="icon" /></a>
               </div>
             </div>
           </div>
           <div className="contact-form-wrapper">
             <Box
               component="form"
-              noValidate
-              autoComplete="off"
+
               sx={{ textAlign: "center" }}
             >
-              <div className="form-item">
-                <TextField
-                  id="outlined-basic"
-                  label="Fullname"
-                  variant="filled"
-                  helperText="Looks fine!"
-                  error={false}
-                  required={true}
-                  fullWidth
-                  value={fullnameValue}
-                  onChange={(e) => setFullnameValue(e.target.value)}
-                />
-              </div>
-              <div className="form-item">
-                <TextField
-                  id="outlined-basic"
-                  label="Email"
-                  variant="filled"
-                  helperText="Looks fine!"
-                  error={false}
-                  required={true}
-                  fullWidth
-                  value={emailValue}
-                  onChange={(e) => setEmailValue(e.target.value)}
-                />
-              </div>
-              <div className="form-item">
-                <TextField
-                  id="outlined-basic"
-                  label="Message"
-                  variant="filled"
-                  helperText="Looks fine!"
-                  multiline
-                  rows={3}
-                  error={false}
-                  required={true}
-                  fullWidth
-                  value={messageValue}
-                  onChange={(e) => setMessageValue(e.target.value)}
-                />
-              </div>
+              <TextField
+                id="outlined-basic"
+                label="Fullname"
+                variant="filled"
+                helperText={errors.fullname ? 'Please enter your fullname' : 'Looks fine!'}
+                error={errors.fullname}
+                required={true}
+                fullWidth
+                value={fullnameValue}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setFullnameValue(e.target.value)}
+              />
+              <TextField
+                id="outlined-basic"
+                label="Email"
+                variant="filled"
+                helperText={errors.email ? 'Invalid email address' : 'Looks fine!'}
+                error={errors.email}
+                required={true}
+                fullWidth
+                value={emailValue}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setEmailValue(e.target.value)}
+              />
+              <TextField
+                id="outlined-basic"
+                label="Message"
+                variant="filled"
+                helperText={errors.message ? 'Please enter your message' : 'Looks fine!'}
+                multiline
+                rows={3}
+                error={errors.message}
+                required={true}
+                fullWidth
+                value={messageValue}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setMessageValue(e.target.value)}
+              />
               <LoadingButton
-                onClick={(e) => handleSend(e)}
+                onClick={handleSend}
                 endIcon={<SendIcon />}
                 loading={isLoading}
                 loadingPosition="end"
                 variant="contained"
               >
-                <span>Send</span>
+                <span> {isLoading ? "Sending" : "Send"}</span>
               </LoadingButton>
             </Box>
           </div>

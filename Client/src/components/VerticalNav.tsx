@@ -65,7 +65,7 @@ function VerticalNav() {
                 <span className={`animation-mask ${animationMaskClass}`}></span>
               </a>
             </li>
-            <li
+            {/*  <li
               onClick={() => { setClasses(), navigate("/get-in-touch") }}
             >
               <a>
@@ -73,7 +73,7 @@ function VerticalNav() {
                 <span className="underline" aria-hidden="true"></span>
                 <span className={`animation-mask ${animationMaskClass}`}></span>
               </a>
-            </li>
+            </li> */}
             <li
               onClick={() => { setClasses(), navigate("/connect") }}
             >
