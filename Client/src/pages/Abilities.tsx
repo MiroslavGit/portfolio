@@ -149,7 +149,7 @@ function MySkills() {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  I am proficient in using Git for version control and collaboration. I have experience working with Git repositories and using branching strategies to manage code changes effectively.
+                  I am proficient in using Git or SVN for version control and collaboration. I have experience working with Git and SVN repositories and using branching strategies to manage code changes effectively.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -158,7 +158,7 @@ function MySkills() {
         </div>
 
         <div className="skills-diagram">
-          <div className="item skill-1 ">Linux</div>
+          <div className="item skill-1 ">SVN</div>
           <div className="item skill-2">Git</div>
           <div className="item skill-3">C#</div>
           <div className="item skill-4">Javascript</div>
@@ -168,7 +168,7 @@ function MySkills() {
           <div className="item skill-7 shine">HTML5</div>
           <div className="item skill-8">C</div>
           <div className="item skill-9 shine">React.js</div>
-          <div className="item skill-10"><span style={{ fontSize: ".8em" }}>Responsive</span></div>
+          <div className="item skill-10"><span style={{ fontSize: ".8em" }}>Node.js</span></div>
           <br />
         </div>
       </div>

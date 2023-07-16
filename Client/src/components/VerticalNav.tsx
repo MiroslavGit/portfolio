@@ -48,7 +48,7 @@ function VerticalNav() {
               </a>
             </li>
             <li
-              onClick={() => { setClasses(), navigate("/mywork") }}
+              onClick={() => { setClasses(), navigate("/projects") }}
             >
               <a>
                 &nbsp;&nbsp;&nbsp;&nbsp; Projects &nbsp;&nbsp;&nbsp;&nbsp;
@@ -57,7 +57,7 @@ function VerticalNav() {
               </a>
             </li>
             <li
-              onClick={() => { setClasses(), navigate("/myskills") }}
+              onClick={() => { setClasses(), navigate("/abilities") }}
             >
               <a>
                 &nbsp;&nbsp;&nbsp;&nbsp; Abilities &nbsp;&nbsp;&nbsp;&nbsp;
@@ -66,7 +66,7 @@ function VerticalNav() {
               </a>
             </li>
             <li
-              onClick={() => { setClasses(), navigate("/contact") }}
+              onClick={() => { setClasses(), navigate("/get-in-touch") }}
             >
               <a>
                 &nbsp;&nbsp;&nbsp;&nbsp; Get in Touch &nbsp;&nbsp;&nbsp;&nbsp;
@@ -75,7 +75,7 @@ function VerticalNav() {
               </a>
             </li>
             <li
-              onClick={() => { setClasses(), navigate("/social") }}
+              onClick={() => { setClasses(), navigate("/connect") }}
             >
               <a>
                 &nbsp;&nbsp;&nbsp;&nbsp; Connect &nbsp;&nbsp;&nbsp;&nbsp;

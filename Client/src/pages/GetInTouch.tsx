@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-import "./me.scss";
+import "./Introduction.scss";
 
-function Cotact() {
+function Social() {
   const dataFetchedRef = useRef(false);
 
   const addShowClassToLetters = () => {
@@ -37,10 +37,16 @@ function Cotact() {
             <span className="pismeno">C</span>
             <span className="pismeno">o</span>
             <span className="pismeno">n</span>
-            <span className="pismeno">t</span>
-            <span className="pismeno">a</span>
+            <span className="pismeno">n</span>
+            <span className="pismeno">e</span>
             <span className="pismeno">c</span>
             <span className="pismeno">t</span>
+          </div>
+          <div style={{ display: "flex" }}>
+            <span className="pismeno">with</span>
+            <span className="pismeno">&nbsp;</span>
+            <span className="pismeno">m</span>
+            <span className="pismeno">e</span>
           </div>
         </div>
       </div>
@@ -55,4 +61,4 @@ function Cotact() {
   );
 }
 
-export default Cotact;
+export default Social;

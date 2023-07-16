@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
-import "./MyWork.scss";
+import "./Projects.scss";
 
 function MyWork() {
   const dataFetchedRef = useRef(false);

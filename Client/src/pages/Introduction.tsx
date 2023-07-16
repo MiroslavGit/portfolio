@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 
 import logo from "../assets/logo_1.png";
 
-import "./me.scss";
+import "./Introduction.scss";
 
 function Me() {
   const navigate = useNavigate();
@@ -96,7 +96,7 @@ function Me() {
       </h2>
       <a
         className="button"
-        onClick={() => navigate("/myWork")}
+        onClick={() => navigate("/projects")}
       >
         <span>Projects</span>
         <div className="icon ">

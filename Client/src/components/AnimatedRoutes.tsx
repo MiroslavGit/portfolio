@@ -1,10 +1,10 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 
-import Me from "../pages/Me";
-import MyWork from "../pages/MyWork";
-import MySkills from "../pages/MySkills";
-import Contact from "../pages/Contact";
-import Social from "../pages/Social";
+import Introduction from "../pages/Introduction";
+import Projects from "../pages/Projects";
+import Abilities from "../pages/Abilities";
+import GetInTouch from "../pages/GetInTouch";
+import Connect from "../pages/Connect";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -14,11 +14,11 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Me />} />
-        <Route path="/mywork" element={<MyWork />} />
-        <Route path="/myskills" element={<MySkills />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/social" element={<Social />} />
+        <Route path="/" element={<Introduction />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/abilities" element={<Abilities />} />
+        <Route path="/get-in-touch" element={<GetInTouch />} />
+        <Route path="/connect" element={<Connect />} />
       </Routes>
     </AnimatePresence>
   );
