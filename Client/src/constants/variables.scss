@@ -7,20 +7,6 @@ $defaultBlack: defaultBlack;
 $transparentWhite: transparentWhite;
 
 //  relativne rozmery
-$content-padding: 1rem;
-$sidebar-width: 265px;
-$sidebar-compact-width: 65px;
-$sidebar-header-height: $sidebar-compact-width;
-$stats-height: calc(2 * #{$sidebar-header-height});
-$stats-additional: 27px;
-$tabs-height: calc(#{$sidebar-header-height});
-$toolbar-height: $sidebar-header-height;
-$nav-height: $sidebar-header-height;
-$nav-user-width: 180px;
-$grid-thead-height: 84px;
-$grid-pager-height: 63px;
-$footer-height: 38px;
-
 
 // breakpoints
 // Small devices (landscape phones, 576px and up)

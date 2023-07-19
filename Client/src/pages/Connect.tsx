@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, ChangeEvent, FormEvent } from "react";
+import { useState, useEffect, useRef, ChangeEvent, forwardRef } from "react";
 import { motion } from "framer-motion";
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -10,16 +10,29 @@ import SendIcon from '@mui/icons-material/Send';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import LoadingButton from '@mui/lab/LoadingButton';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogActions from '@mui/material/DialogActions';
+import DialogTitle from '@mui/material/DialogTitle';
+
+import * as actions from '../actions/actions';
 
 import "./Connect.scss";
 
 function Cotact() {
   const dataFetchedRef = useRef(false);
 
-  const [fullnameValue, setFullnameValue] = useState<string>("");
-  const [emailValue, setEmailValue] = useState<string>("");
-  const [messageValue, setMessageValue] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
+  const [resMessage, setResMessage] = useState<string>("");
+
+  const [emailContent, setEmailContent] = useState<{ fullname: string; email: string; message: string }>({
+    fullname: "",
+    email: "",
+    message: "",
+  });
   const [errors, setErrors] = useState<{ fullname: boolean; email: boolean; message: boolean }>({
     fullname: false,
     email: false,
@@ -50,27 +63,28 @@ function Cotact() {
   };
 
   const validInputs = () => {
-    const hasErrors =
-      fullnameValue.trim() === '' ||
-      !validateEmail(emailValue) ||
-      messageValue.trim() === '';
+    const hasErrors = emailContent.fullname.trim() === '' || !validateEmail(emailContent.email) || emailContent.message.trim() === '';
 
     setErrors({
-      fullname: fullnameValue.trim() === '',
-      email: !validateEmail(emailValue),
-      message: messageValue.trim() === '',
+      fullname: emailContent.fullname.trim() === '',
+      email: !validateEmail(emailContent.email),
+      message: emailContent.message.trim() === '',
     });
 
     return !hasErrors;
   };
 
-  const handleSend = (e: any) => {
+  const handleSend = async (e: any) => {
     e.preventDefault();
 
     const validIpnuts = validInputs();
 
     if (validIpnuts) {
       setIsLoading(true);
+      let res = await actions.sendEmail(emailContent);
+      setIsLoading(false);
+      setResMessage(res.message)
+      setIsDialogOpen(true);
     }
   };
 
@@ -138,8 +152,11 @@ function Cotact() {
                 error={errors.fullname}
                 required={true}
                 fullWidth
-                value={fullnameValue}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => setFullnameValue(e.target.value)}
+                value={emailContent.fullname}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setEmailContent((prevEmailContent) => ({
+                  ...prevEmailContent,
+                  fullname: e.target.value,
+                }))}
               />
               <TextField
                 id="outlined-basic"
@@ -149,8 +166,11 @@ function Cotact() {
                 error={errors.email}
                 required={true}
                 fullWidth
-                value={emailValue}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => setEmailValue(e.target.value)}
+                value={emailContent.email}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setEmailContent((prevEmailContent) => ({
+                  ...prevEmailContent,
+                  email: e.target.value,
+                }))}
               />
               <TextField
                 id="outlined-basic"
@@ -162,8 +182,11 @@ function Cotact() {
                 error={errors.message}
                 required={true}
                 fullWidth
-                value={messageValue}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => setMessageValue(e.target.value)}
+                value={emailContent.message}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setEmailContent((prevEmailContent) => ({
+                  ...prevEmailContent,
+                  message: e.target.value,
+                }))}
               />
               <LoadingButton
                 onClick={handleSend}
@@ -178,6 +201,25 @@ function Cotact() {
           </div>
         </div>
       </div>
+
+      {/* Dialog pre odpoveď odoslania emailu */}
+      <Dialog
+        open={isDialogOpen}
+        onClose={() => { setIsDialogOpen(false) }}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+        fullWidth={true}
+      >
+        <DialogTitle> {"Email status:"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-slide-description">
+            {resMessage}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => { setIsDialogOpen(false) }}>Ok</Button>
+        </DialogActions>
+      </Dialog>
 
     </motion.div>
   );

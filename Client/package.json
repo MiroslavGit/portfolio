@@ -1,5 +1,4 @@
 {
-  "homepage": "http://MiroslavGit.github.io/portfolio",
   "name": "portfolio",
   "private": true,
   "version": "1.0.0",
@@ -8,8 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "vite build && gh-pages -d dist -r MiroslavGit/portfolio"
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
