@@ -11,15 +11,12 @@ function VerticalNav() {
 
   const [navClass, setnavClass] = useState("");
   const [hamburgerClass, setnhamburgerClass] = useState("");
-
   const [sectionClass, setSelectionCLass] = useState("");
-  const [animationMaskClass, setAnimationMaskClass] = useState("");
 
   const setClasses = () => {
     navClass === "openMenu" ? setnavClass("") : setnavClass("openMenu");
     navClass === "openMenu" ? setnhamburgerClass("") : setnhamburgerClass("activatehamburger");
     sectionClass === "openSection" ? setSelectionCLass("") : setSelectionCLass("openSection");
-    navClass === "openMenu" ? setAnimationMaskClass("") : setAnimationMaskClass("animation-mask-color-after");
   };
 
   return (
@@ -43,8 +40,6 @@ function VerticalNav() {
             >
               <a>
                 &nbsp;&nbsp;&nbsp;&nbsp; Introduction &nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="underline"></span>
-                <span className={`animation-mask ${animationMaskClass}`}></span>
               </a>
             </li>
             <li
@@ -52,8 +47,6 @@ function VerticalNav() {
             >
               <a>
                 &nbsp;&nbsp;&nbsp;&nbsp; Projects &nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="underline" ></span>
-                <span className={`animation-mask ${animationMaskClass}`}></span>
               </a>
             </li>
             <li
@@ -61,26 +54,13 @@ function VerticalNav() {
             >
               <a>
                 &nbsp;&nbsp;&nbsp;&nbsp; Abilities &nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="underline"></span>
-                <span className={`animation-mask ${animationMaskClass}`}></span>
               </a>
             </li>
-            {/*  <li
-              onClick={() => { setClasses(), navigate("/get-in-touch") }}
-            >
-              <a>
-                &nbsp;&nbsp;&nbsp;&nbsp; Get in Touch &nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="underline" aria-hidden="true"></span>
-                <span className={`animation-mask ${animationMaskClass}`}></span>
-              </a>
-            </li> */}
             <li
               onClick={() => { setClasses(), navigate("/connect") }}
             >
               <a>
                 &nbsp;&nbsp;&nbsp;&nbsp; Connect &nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="underline" aria-hidden="true"></span>
-                <span className={`animation-mask ${animationMaskClass}`}></span>
               </a>
             </li>
           </ul>
@@ -96,16 +76,16 @@ function VerticalNav() {
 
             <div className="hover column">
               <div>
-                <figure><img src={jaFeed} /></figure>
+                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={jaFeed} /></a></figure>
               </div>
               <div>
-                <figure><img src={jaFeed} /></figure>
+                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={jaFeed} /></a></figure>
               </div>
               <div>
-                <figure><img src={jaFeed} /></figure>
+                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={jaFeed} /></a></figure>
               </div>
               <div>
-                <figure><img src={jaFeed} /></figure>
+                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={jaFeed} /></a></figure>
               </div>
             </div>
 

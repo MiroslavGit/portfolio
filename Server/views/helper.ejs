@@ -20,10 +20,19 @@
             background-color: #fff;
             border-color: #007bff;
             color: #333;
+            cursor: pointer;
+            /* Add cursor pointer to show it's clickable */
         }
 
         .badge.bg-primary {
             background-color: #007bff;
+        }
+
+        /* Additional styling for the content that will be shown on click */
+        .collapse-content {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border: 1px solid #007bff;
         }
     </style>
 </head>
@@ -35,10 +44,14 @@
             <div class="col-md-6 mx-auto">
                 <ul class="list-group">
                     <% apiRoutes.forEach((route)=> { %>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <li class="list-group-item d-flex justify-content-between align-items-center"
+                            data-bs-toggle="collapse" data-bs-target="#collapse-<%- route.route %>">
                             <span><%- route.route %></span>
                             <span class="badge bg-primary"><%- route.description %></span>
                         </li>
+                        <div class="collapse collapse-content" id="collapse-<%- route.route %>">
+                            <p><%- route.details %></p>
+                        </div>
                         <% }) %>
                 </ul>
             </div>

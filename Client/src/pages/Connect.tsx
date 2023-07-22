@@ -141,14 +141,14 @@ function Cotact() {
           <div className="contact-form-wrapper">
             <Box
               component="form"
-
               sx={{ textAlign: "center" }}
             >
               <TextField
+                className={errors.fullname ? '' : 'textfield'}
                 id="outlined-basic"
                 label="Fullname"
                 variant="filled"
-                helperText={errors.fullname ? 'Please enter your fullname' : 'Looks fine!'}
+                helperText={errors.fullname ? 'Please enter your fullname' : ''}
                 error={errors.fullname}
                 required={true}
                 fullWidth
@@ -159,10 +159,11 @@ function Cotact() {
                 }))}
               />
               <TextField
+                className={errors.email ? '' : 'textfield'}
                 id="outlined-basic"
                 label="Email"
                 variant="filled"
-                helperText={errors.email ? 'Invalid email address' : 'Looks fine!'}
+                helperText={errors.email ? 'Invalid email address' : ''}
                 error={errors.email}
                 required={true}
                 fullWidth
@@ -173,10 +174,11 @@ function Cotact() {
                 }))}
               />
               <TextField
+                className={errors.message ? '' : 'textfield'}
                 id="outlined-basic"
                 label="Message"
                 variant="filled"
-                helperText={errors.message ? 'Please enter your message' : 'Looks fine!'}
+                helperText={errors.message ? 'Please enter your message' : ''}
                 multiline
                 rows={3}
                 error={errors.message}

@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router";
 
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -11,8 +10,6 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import "./abilities.scss";
 
 function MySkills() {
-  const navigate = useNavigate();
-
   const dataFetchedRef = useRef(false);
 
   const addShowClassToLetters = () => {

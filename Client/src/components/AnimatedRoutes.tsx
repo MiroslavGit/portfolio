@@ -5,6 +5,7 @@ import Projects from "../pages/Projects";
 import Abilities from "../pages/Abilities";
 import GetInTouch from "../pages/GetInTouch";
 import Connect from "../pages/Connect";
+import NotFound from "../pages/NotFound";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -19,6 +20,7 @@ function AnimatedRoutes() {
         <Route path="/abilities" element={<Abilities />} />
         <Route path="/get-in-touch" element={<GetInTouch />} />
         <Route path="/connect" element={<Connect />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
   );

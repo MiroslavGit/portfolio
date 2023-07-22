@@ -4,13 +4,13 @@ html,
 body {
   height: 100%;
   margin: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 * {
   padding: 0;
   margin: 0;
-  /*  font-family: "Fuzzy Bubbles", cursive; */
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 /* Univerzalne CSS lebo na kazdej stranke je to iste */
@@ -24,8 +24,8 @@ body {
 
 /* Bouncing animated text */
 .pismeno {
-  font-size: 6.5rem;
-  color: #D8D2CB;
+  font-size: 6.1rem;
+  color: #e0e5e6;
   font-weight: bold;
   transition-duration: 0.5s;
   opacity: 0;
@@ -33,7 +33,7 @@ body {
 }
 
 .pismeno.vacsiePismeno {
-  font-size: 10rem;
+  font-size: 9.2rem;
 }
 
 .pismeno.show {
