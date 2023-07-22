@@ -76,16 +76,16 @@ function VerticalNav() {
 
             <div className="hover column">
               <div>
-                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={jaFeed} /></a></figure>
+                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={jaFeed} alt="Miroslav Hanisko" /></a></figure>
               </div>
               <div>
-                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={jaFeed} /></a></figure>
+                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={jaFeed} alt="Miroslav Hanisko" /></a></figure>
               </div>
               <div>
-                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={jaFeed} /></a></figure>
+                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={jaFeed} alt="Miroslav Hanisko" /></a></figure>
               </div>
               <div>
-                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={jaFeed} /></a></figure>
+                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={jaFeed} alt="Miroslav Hanisko" /></a></figure>
               </div>
             </div>
 

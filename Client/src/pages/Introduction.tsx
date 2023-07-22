@@ -77,7 +77,7 @@ function Me() {
         <div className="gradient-ring">
           <div className="outer-ring center"></div>
           <div className="inner-ring center">
-            <img className="gradient-ring-logo" src={logo} />
+            <img className="gradient-ring-logo" alt="Miroslav Hanisko" src={logo} />
           </div>
         </div>
       </div>
