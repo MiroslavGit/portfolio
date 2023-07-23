@@ -69,7 +69,3 @@ MY_EMAIL=your_email_address
 ### Deploying
 
 You can deploy the client and server separately using Vercel or any other hosting platform.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
