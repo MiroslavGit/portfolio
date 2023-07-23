@@ -58,11 +58,11 @@ The server also includes a route to send emails from the portfolio to the admin.
 
 1. Create a `.env` file in the Server directory with the following variables:
 
-CLIENT_ID=your_gmail_api_client_id
-CLIENT_SECRET=your_gmail_api_client_secret
-REDIRECS_URI=your_gmail_api_redirect_uri
-REFRESH_TOKEN=your_gmail_api_refresh_token
-MY_EMAIL=your_email_address
+- CLIENT_ID=your_gmail_api_client_id
+- CLIENT_SECRET=your_gmail_api_client_secret
+- REDIRECS_URI=your_gmail_api_redirect_uri
+- REFRESH_TOKEN=your_gmail_api_refresh_token
+- MY_EMAIL=your_email_address
 
 2. Replace `your_gmail_api_client_id`, `your_gmail_api_client_secret`, `your_gmail_api_redirect_uri`, `your_gmail_api_refresh_token`, and `your_email_address` with your actual Gmail API credentials and email address.
 
