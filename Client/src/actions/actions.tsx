@@ -1,4 +1,6 @@
-const buildUrl = (path: string) => `http://localhost:3000/${path}`;
+//const buildUrl = (path: string) => `http://localhost:3000/${path}`;
+const buildUrl = (path: string) => `https://miroslav-hanisko-server.vercel.app/${path}`;
+
 
 export const sendEmail = async (email: object) => {
     const url = buildUrl('sendEmail');
