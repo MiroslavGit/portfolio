@@ -4,6 +4,7 @@ const buildUrl = (path: string) => `https://miroslav-hanisko-server.vercel.app/$
 
 export const sendEmail = async (email: object) => {
     const url = buildUrl('sendEmail');
+
     const response = await fetch(url, {
         method: 'POST',
         headers: {
