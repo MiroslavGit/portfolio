@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 
 import logo from "../assets/logo_1.png";
-import jaFeed from "../assets/ja_feed.png";
+import meFeed1 from "../assets/me_feed_1.jpg";
+import meFeed2 from "../assets/me_feed_2.jpg";
+import meFeed3 from "../assets/me_feed_3.jpg";
+import meFeed4 from "../assets/me_feed_4.jpg";
+
 
 import "./verticalNav.scss";
 
@@ -76,16 +80,16 @@ function VerticalNav() {
 
             <div className="hover column">
               <div>
-                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={jaFeed} alt="Miroslav Hanisko" /></a></figure>
+                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed1} alt="Miroslav Hanisko" /></a></figure>
               </div>
               <div>
-                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={jaFeed} alt="Miroslav Hanisko" /></a></figure>
+                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed2} alt="Miroslav Hanisko" /></a></figure>
               </div>
               <div>
-                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={jaFeed} alt="Miroslav Hanisko" /></a></figure>
+                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed3} alt="Miroslav Hanisko" /></a></figure>
               </div>
               <div>
-                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={jaFeed} alt="Miroslav Hanisko" /></a></figure>
+                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed4} alt="Miroslav Hanisko" /></a></figure>
               </div>
             </div>
 

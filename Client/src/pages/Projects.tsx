@@ -64,7 +64,7 @@ function MyWork() {
 
           <div className="card card0">
             <div className="border">
-              <h2>Al Pacino</h2>
+              <h2>TeeeBase</h2>
               <div className="icons">
                 <button className="iconsButton">
                   <ArrowOutwardIcon />
@@ -73,9 +73,9 @@ function MyWork() {
             </div>
           </div>
 
-          <div className="card card0">
+          <div className="card card1">
             <div className="border">
-              <h2>Al Pacino</h2>
+              <h2>TeeeBase</h2>
               <div className="icons">
                 <button className="iconsButton">
                   <ArrowOutwardIcon />
@@ -84,9 +84,9 @@ function MyWork() {
             </div>
           </div>
 
-          <div className="card card0">
+          <div className="card card2">
             <div className="border">
-              <h2>Al Pacino</h2>
+              <h2>TeeeBase</h2>
               <div className="icons">
                 <button className="iconsButton">
                   <ArrowOutwardIcon />
@@ -96,6 +96,8 @@ function MyWork() {
           </div>
 
         </div>
+
+
       </div>
     </motion.div>
   );

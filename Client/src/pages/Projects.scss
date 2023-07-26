@@ -10,7 +10,7 @@
 }
 
 .border {
-  height: 260px;
+  height: 180px;
   width: 380px;
   background: transparent;
   position: relative;
@@ -24,8 +24,8 @@
 }
 
 .card {
-  height: 300px;
-  width: 440px;
+  height: 223px;
+  width: 450px;
   border-radius: 10px;
   transition: 0.8s;
   overflow: hidden;
@@ -38,30 +38,56 @@
 }
 
 .card0 {
-  background: url("https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg") center center no-repeat;
-  background-size: 440px;
+  background: url("../assets/projects/teebase/dashboard.png") center center no-repeat;
+  background-size: 450px;
 }
 
 .card0:hover {
-  background: url("https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg") left center no-repeat;
-  background-size: 500px;
+  background: url("../assets/projects/teebase/dashboard.png") left center no-repeat;
+  background-size: 550px;
 }
 
-.card0:hover h2 {
+.card1 {
+  background: url("../assets/projects/teebase/dashboard.png") center center no-repeat;
+  background-size: 450px;
+}
+
+.card1:hover {
+  background: url("../assets/projects/teebase/dashboard.png") left center no-repeat;
+  background-size: 550px;
+}
+
+.card2 {
+  background: url("../assets/projects/teebase/dashboard.png") center center no-repeat;
+  background-size: 450px;
+}
+
+.card2:hover {
+  background: url("../assets/projects/teebase/dashboard.png") left center no-repeat;
+  background-size: 550px;
+}
+
+.card:hover h2 {
   opacity: 0;
 }
 
-h2 {
-  color: $defaultWhite;
-  margin: 20px;
-  opacity: 1;
-  transition: opacity 1s;
+.border {
+  h2 {
+    color: $defaultBlack;
+    background-color: $transparentH2background;
+    margin: 10px;
+    padding: 1px 10px;
+    opacity: 1;
+    transition: opacity 1s;
+    width: 130px;
+    border-radius: 5px;
+  }
 }
 
 .icons {
   position: absolute;
   height: 130px;
-  top: 166px;
+  top: 100px;
   left: 10px;
   width: 50px;
   display: flex;
