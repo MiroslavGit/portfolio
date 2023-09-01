@@ -1,5 +1,5 @@
-@import "../constants/variables.scss";
-@import "../constants/themes.scss";
+@import "../constants/_variables.scss";
+@import "../constants/_themes.scss";
 
 .popis-div {
     width: 60%;
@@ -86,8 +86,8 @@
     height: 4em;
     line-height: 4em;
 
-    background-color: $defaultDarkBlue;
-    border-color: $defaultDarkBlue;
+    background-color: $light-darkBlue;
+    border-color: $light-darkBlue;
 
     left: 1.93em;
     top: 2.66em;
@@ -207,7 +207,7 @@
 }
 
 .accordion {
-    color: $defaultWhite !important;
+    color: $light-white !important;
     background-color: rgb(70, 134, 177) !important;
     margin-bottom: 20px;
 }

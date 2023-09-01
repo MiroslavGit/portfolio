@@ -66,7 +66,7 @@ function MySkills() {
           <hr className="hr" />
           <h2 className="popis">
             As a web developer, I possess a diverse set of skills and expertise that allow me to create dynamic and engaging web applications.
-            <br /> <br />
+            <br />
             Here are some of the key areas I specialize in:
           </h2>
 

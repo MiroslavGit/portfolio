@@ -1,5 +1,5 @@
-@import "../constants/variables.scss";
-@import "../constants/themes.scss";
+@import "../constants/_variables.scss";
+@import "../constants/_themes.scss";
 
 
 .contact {
@@ -25,16 +25,17 @@
 
     .contact-links {
         background:
-            radial-gradient(circle at 55% 92%, $defaultDarkBlue 0 12%, transparent 12.2%),
-            radial-gradient(circle at 94% 72%, $defaultLightBlue 0 10%, transparent 10.2%),
-            radial-gradient(circle at 20% max(78%, 350px), $defaultLightBlue 0 7%, transparent 7.2%),
-            radial-gradient(circle at 0% 0%, $defaultDarkBlue 0 40%, transparent 40.2%),
+            radial-gradient(circle at 55% 92%, $light-darkBlue 0 12%, transparent 12.2%),
+            radial-gradient(circle at 94% 72%, $light-lightBlue 0 10%, transparent 10.2%),
+            radial-gradient(circle at 20% max(78%, 350px), $light-lightBlue 0 7%, transparent 7.2%),
+            radial-gradient(circle at 0% 0%, $light-darkBlue 0 40%, transparent 40.2%),
             #1f2e43;
         border-radius: 10px 0 0 10px;
         text-align: center;
 
         h2 {
             font-size: 2rem;
+            color: $light-white;
         }
 
         .links {
@@ -63,7 +64,7 @@
     }
 
     .contact-form-wrapper {
-        background-color: $defaultBrown;
+        background-color: $light-brown;
         border-radius: 0 10px 10px 0;
     }
 

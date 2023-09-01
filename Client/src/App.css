@@ -20,6 +20,7 @@ body {
   padding-left: 220px;
   width: 90%;
   height: 100%;
+  overflow-y: scroll;
 }
 
 /* Bouncing animated text */

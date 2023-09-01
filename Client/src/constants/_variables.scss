@@ -1,0 +1,35 @@
+// paleta farieb
+
+/* Light theme */
+$light-darkBlue: light-darkBlue;
+$light-lightBlue: light-lightBlue;
+
+$light-brown: light-brown;
+$light-white: light-white;
+
+$light-black: light-black;
+$light-transparentWhite: light-transparentWhite;
+$light-transparentH2background: light-transparentH2background;
+
+/* Dark theme */
+$dark-darkBlue: dark-darkBlue;
+$dark-lightBlue: dark-lightBlue;
+
+$dark-brown: dark-brown;
+$dark-white: dark-white;
+
+$dark-black: dark-black;
+$dark-light-transparentWhite: dark-light-transparentWhite;
+$dark-light-transparentH2background: dark-light-transparentH2background;
+
+// relativne rozmery
+
+// breakpoints
+// Small devices (landscape phones, 576px and up)
+$breakpoint-sm: 576px;
+// Medium devices (tablets, 768px and up)
+$breakpoint-md: 768px;
+// Large devices (desktops, 992px and up)
+$breakpoint-lg: 992px;
+// Extra large devices (large desktops, 1200px and up)
+$breakpoint-xl: 1200px;

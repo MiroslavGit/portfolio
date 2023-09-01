@@ -1,117 +1,41 @@
-@import "../constants/variables.scss";
-@import "../constants/themes.scss";
+@import "../constants/_variables.scss";
+@import "../constants/_themes.scss";
 
-.galleryContainer {
-  display: flex;
-  align-items: center;
-  margin-top: 120px;
-  width: 100%;
-  justify-content: space-around;
-}
+.multiPicker {
+  width: 500px;
+  padding-top: 50px;
 
-.border {
-  height: 180px;
-  width: 380px;
-  background: transparent;
-  position: relative;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  transition: border 1s;
-}
+  .MuiFormControl-root {
 
-.border:hover {
-  border: 1px solid #fff;
-}
+    label {
+      color: $light-white !important;
+    }
 
-.card {
-  height: 223px;
-  width: 450px;
-  border-radius: 10px;
-  transition: 0.8s;
-  overflow: hidden;
-  box-shadow: 0 70px 63px -60px #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin-right: 30px;
-}
+    .MuiInputBase-root {
+      cursor: pointer;
 
-.card0 {
-  background: url("../assets/projects/teebase/dashboard.png") center center no-repeat;
-  background-size: 450px;
-}
+      input {
+        cursor: pointer;
+      }
 
-.card0:hover {
-  background: url("../assets/projects/teebase/dashboard.png") left center no-repeat;
-  background-size: 550px;
-}
+      .MuiOutlinedInput-notchedOutline {
+        border-color: $light-white !important;
+      }
 
-.card1 {
-  background: url("../assets/projects/teebase/dashboard.png") center center no-repeat;
-  background-size: 450px;
-}
+      .MuiChip-filled {
+        background-color: $light-white !important;
+        color: $dark-black !important;
+      }
 
-.card1:hover {
-  background: url("../assets/projects/teebase/dashboard.png") left center no-repeat;
-  background-size: 550px;
-}
-
-.card2 {
-  background: url("../assets/projects/teebase/dashboard.png") center center no-repeat;
-  background-size: 450px;
-}
-
-.card2:hover {
-  background: url("../assets/projects/teebase/dashboard.png") left center no-repeat;
-  background-size: 550px;
-}
-
-.card:hover h2 {
-  opacity: 0;
-}
-
-.border {
-  h2 {
-    color: $defaultBlack;
-    background-color: $transparentH2background;
-    margin: 10px;
-    padding: 1px 10px;
-    opacity: 1;
-    transition: opacity 1s;
-    width: 130px;
-    border-radius: 5px;
+      .MuiAutocomplete-endAdornment {
+        .MuiButtonBase-root {
+          color: $dark-white !important;
+        }
+      }
+    }
   }
 }
 
-.icons {
-  position: absolute;
-  height: 130px;
-  top: 100px;
-  left: 10px;
-  width: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.iconsButton {
-  border-radius: 6px;
-  cursor: pointer;
-  color: $defaultWhite;
-  padding-top: 4px;
-  background-color: $defaultBrown;
-  box-shadow: 0 70px 63px -60px #000;
-  width: 40px;
-  transition: 0.8s;
-  border: none;
-  color: $defaultBlack;
-}
-
-.iconsButton:hover {
-  width: 120px;
-  margin-left: 80px;
-  background-color: $defaultBrown;
-  color: $defaultBlack;
+.gallery {
+  margin-bottom: 300px;
 }

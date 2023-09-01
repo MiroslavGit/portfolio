@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
 
 import logo from "../assets/logo_1.png";
+import Button from "../components/Button";
 
 import "./Introduction.scss";
 
@@ -94,15 +95,8 @@ function Me() {
         <br />
         Check out my projects below.
       </h2>
-      <a
-        className="button"
-        onClick={() => navigate("/projects")}
-      >
-        <span>Projects</span>
-        <div className="icon ">
-          <i className="fa fa-remove">{"->"}</i>
-        </div>
-      </a>
+
+      <Button onClick={() => navigate("/projects")} title="Projects" />
     </motion.div>
   );
 }

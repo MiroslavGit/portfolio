@@ -1,0 +1,101 @@
+/* Light theme */
+$light-darkBlue: #596164;
+$light-lightBlue: #2e94b9;
+
+$light-brown: #acdcee;
+$light-white: #fff;
+
+$light-black: #000000;
+$light-light-transparentWhite: #ffffff20;
+$light-light-transparentH2background: rgba(168, 168, 168, 0.273);
+
+$theme-light: (
+    light-darkBlue: $light-darkBlue,
+    light-lightBlue: $light-lightBlue,
+
+    light-brown: $light-brown,
+    light-white: $light-white,
+
+    light-black: $light-black,
+    light-light-transparentWhite: $light-light-transparentWhite,
+    light-light-transparentH2background: $light-light-transparentH2background) !default;
+
+
+/* Dark theme */
+$dark-darkBlue: #265779;
+$dark-lightBlue: #658eb2;
+
+$dark-brown: #c2c2c2;
+$dark-white: #FFFFFF;
+
+$dark-black: #000000;
+$dark-light-transparentWhite: #ffffff20;
+$dark-light-transparentH2background: rgba(168, 168, 168, 0.273
+);
+
+$theme-dark: (
+    dark-darkBlue: $dark-darkBlue,
+    dark-lightBlue: $dark-lightBlue,
+
+    dark-brown: $dark-brown,
+    dark-white: $dark-white,
+
+    dark-black: $dark-black,
+    dark-light-transparentWhite: $dark-light-transparentWhite,
+    dark-light-transparentH2background: $dark-light-transparentH2background) !default;
+
+
+// $themes: (
+//     light: $theme-light,
+//     dark: $theme-dark ) !default;
+
+// @mixin import-theme() {
+
+//     @each $theme,
+//     $map in $themes {
+//         //@debug "Entering themed mixin for theme: #{$theme}"; // Debug statement
+
+//         .theme-#{"" + $theme} {
+//             $theme-map: () !global;
+
+//             @each $key,
+//             $submap in $map {
+//                 $value: map-get(map-get($themes, $theme), '#{$key}'
+//             );
+//             $theme-map: map-merge($theme-map, ($key: $value)) !global;
+//             // @debug "Theme: #{$theme}, Key: #{$key}, Value: #{$value}"; // Debug statement
+
+//         }
+
+//         @content;
+//         $theme-map: null !global;
+//     }
+// }
+// }
+
+// @mixin themed() {
+
+//     @each $theme,
+//     $map in $themes {
+//         // @debug "Importing theme: #{$theme}"; // Debug statement
+
+//         .theme-#{"" + $theme} & {
+//             $theme-map: () !global;
+
+//             @each $key,
+//             $submap in $map {
+//                 $value: map-get(map-get($themes, $theme), '#{$key}');
+//                 $theme-map: map-merge($theme-map, ($key: $value)) !global;
+//                 //@debug "Theme: #{$theme}, Key: #{$key}, Value: #{$value}"; // Debug statement
+
+//             }
+
+//             @content;
+//             $theme-map: null !global;
+//         }
+//     }
+// }
+
+// @function color($key) {
+//     @return map-get($theme-map, $key);
+// }

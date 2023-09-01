@@ -1,5 +1,5 @@
-@import "../constants/variables.scss";
-@import "../constants/themes.scss";
+@import "../constants/_variables.scss";
+@import "../constants/_themes.scss";
 
 /* Popis */
 .popis-div {
@@ -12,8 +12,9 @@
 }
 
 .popis {
-  color: $defaultWhite;
   font-size: 21px;
+  line-height: 1.5;
+  color: $light-white;
 }
 
 /* Gradient Ring */
@@ -29,11 +30,11 @@
   height: 300px;
   width: 300px;
   background-image: linear-gradient(135deg,
-      $defaultBrown 0%,
-      $defaultDarkBlue 5%,
-      $defaultWhite 15%,
-      $defaultDarkBlue 50%,
-      $defaultBrown 100%);
+      $light-brown 0%,
+      $light-darkBlue 5%,
+      $light-white 15%,
+      $light-darkBlue 50%,
+      $light-brown 100%);
   border-radius: 50%;
 
   /*  Rotate  */
@@ -68,79 +69,4 @@
   100% {
     transform: rotate(360deg);
   }
-}
-
-/* Main Styles */
-.button {
-  display: block;
-  background-color: $defaultBrown;
-  width: 220px;
-  height: 60px;
-  line-height: 65px;
-  color: $defaultBlack;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 5px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
-  transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-  margin: 30px 0 0 20px;
-}
-
-.button span,
-.button .icon {
-  display: block;
-  height: 100%;
-  text-align: center;
-  position: absolute;
-  top: 0;
-}
-
-.button span {
-  width: 72%;
-  line-height: inherit;
-  font-size: 20px;
-  text-transform: uppercase;
-  left: 0;
-  transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-}
-
-.button span:after {
-  content: "";
-  background-color: $defaultBlack;
-  width: 2px;
-  height: 70%;
-  position: absolute;
-  top: 15%;
-  right: -1px;
-}
-
-.button .icon {
-  width: 28%;
-  right: 0;
-  transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-}
-
-.button .icon .fa {
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-  font-family: "Fuzzy Bubbles", cursive;
-  transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4), height 0.25s ease;
-}
-
-.button .icon .fa-remove {
-  height: 36px;
-}
-
-.button:hover span {
-  left: -72%;
-  opacity: 0;
-}
-
-.button:hover .icon {
-  width: 100%;
-}
-
-.button:hover .icon .fa {
-  font-size: 45px;
 }

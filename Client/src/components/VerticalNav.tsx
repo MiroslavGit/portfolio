@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 
 import logo from "../assets/logo_1.png";
@@ -7,6 +7,11 @@ import meFeed2 from "../assets/me_feed_2.jpg";
 import meFeed3 from "../assets/me_feed_3.jpg";
 import meFeed4 from "../assets/me_feed_4.jpg";
 
+import HeightIcon from '@mui/icons-material/Height';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 import "./verticalNav.scss";
 
@@ -76,26 +81,60 @@ function VerticalNav() {
         onClick={() => { setClasses() }}
       >
         <div className="sectionContent">
-          <div className="socialIcons">
-
-            <div className="hover column">
-              <div>
-                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed1} alt="Miroslav Hanisko" /></a></figure>
-              </div>
-              <div>
-                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed2} alt="Miroslav Hanisko" /></a></figure>
-              </div>
-              <div>
-                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed3} alt="Miroslav Hanisko" /></a></figure>
-              </div>
-              <div>
-                <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed4} alt="Miroslav Hanisko" /></a></figure>
-              </div>
+          <div className="wrapper">
+            <div>
+              <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed1} alt="Miroslav Hanisko" /></a></figure>
+            </div>
+            <div>
+              <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed2} alt="Miroslav Hanisko" /></a></figure>
+            </div>
+            <div>
+              <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed3} alt="Miroslav Hanisko" /></a></figure>
+            </div>
+            <div>
+              <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed2} alt="Miroslav Hanisko" /></a></figure>
+            </div>
+            <div>
+              <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed4} alt="Miroslav Hanisko" /></a></figure>
+            </div>
+            <div>
+              <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed1} alt="Miroslav Hanisko" /></a></figure>
+            </div>
+            <div>
+              <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed3} alt="Miroslav Hanisko" /></a></figure>
+            </div>
+            <div>
+              <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed4} alt="Miroslav Hanisko" /></a></figure>
+            </div>
+            <div className="imageTool">
+            </div>
+            <div className="imageTool">
+              <SwapHorizIcon />
+            </div>
+            <div className="imageTool">
+              <ArrowDownwardIcon />
+            </div >
+            <div className="imageTool">
+              <HeightIcon />
+            </div>
+            <div className="imageTool">
+              <ArrowBackIcon />
+            </div>
+            <div className="imageTool">
+              <ArrowDownwardIcon />
+            </div>
+            <div className="imageTool">
+              <ArrowUpwardIcon />
+            </div >
+            <div className="imageTool">
+              <SwapHorizIcon />
+            </div>
+            <div className="imageTool">
             </div>
 
           </div>
         </div>
-      </section>
+      </section >
     </>
   );
 }
