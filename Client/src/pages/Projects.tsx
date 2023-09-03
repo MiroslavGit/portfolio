@@ -6,9 +6,6 @@ import Autocomplete from '@mui/material/Autocomplete';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 
-const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
-const checkedIcon = <CheckBoxIcon fontSize="small" />;
-
 import Project from "../components/Project";
 
 import teebase from "../assets/projects/teebase/dashboard.png";
@@ -64,32 +61,33 @@ interface ProjectTypes {
 }
 interface PickerTagTypes {
   title: string;
+  selected: boolean;
 }
 
 function MyWork() {
   const dataFetchedRef = useRef(false);
 
-  const addShowClassToLetters = () => {
-    const allLetters = Array.from(document.getElementsByClassName("pismeno"));
+  const [pickerTags, setPickerTags] = useState<PickerTagTypes[]>([
+    { title: 'React', selected: false },
+    { title: 'Redux', selected: false },
+    { title: 'Typescript', selected: false },
+    { title: 'NodeJS', selected: false },
+    { title: 'Express', selected: false },
+    { title: 'MongoDB', selected: false },
+    { title: 'JWT', selected: false },
+    { title: 'Bcrypt', selected: false },
+    { title: 'Mui', selected: false },
+    { title: 'Bootstrap', selected: false },
+    { title: 'Wordpress', selected: false },
+    { title: 'Elementor', selected: false },
+    { title: 'PHP', selected: false },
+    { title: 'Html', selected: false },
+    { title: 'CSS', selected: false },
+    { title: 'JavaScript', selected: false },
+    { title: 'MySQL', selected: false },
+  ]);
 
-    setTimeout(() => {
-      Array.from(allLetters).forEach((letter, index) => {
-        setTimeout(() => {
-          letter.classList.toggle("show");
-        }, index * 170);
-      });
-    }, 1000);
-  };
-
-  useEffect(() => {
-    if (dataFetchedRef.current) return;
-    dataFetchedRef.current = true;
-    addShowClassToLetters();
-  }, []);
-
-  const [selectedTags, setSelectedTags] = useState([]);
-
-  const projects: ProjectTypes[] = [
+  const [projects, setProjects] = useState<ProjectTypes[]>([
     {
       direction: "left",
       title: "TeeBase",
@@ -150,30 +148,32 @@ function MyWork() {
       childrenDescription: ["Home", "About", "Portfolio", "Skills"],
       tags: ["PHP", "Html", "CSS", "JavaScript", "MySQL"],
     },
-  ];
+  ]);
 
-  const pickerTags: PickerTagTypes[] = [
-    { title: 'React' },
-    { title: 'Redux' },
-    { title: 'Typescript' },
-    { title: 'NodeJS' },
-    { title: 'Express' },
-    { title: 'MongoDB' },
-    { title: 'JWT' },
-    { title: 'Bcrypt' },
-    { title: 'Mui' },
-    { title: 'Bootstrap' },
-    { title: 'Wordpress' },
-    { title: 'Elementor' },
-    { title: 'PHP' },
-    { title: 'Html' },
-    { title: 'CSS' },
-    { title: 'JavaScript' },
-    { title: 'MySQL' },
-  ];
+  const [selectedTags, setSelectedTags] = useState([]);
 
-  const handleTagSelect = (event: any, tags: any) => {
-    setSelectedTags(tags);
+  const addShowClassToLetters = () => {
+    const allLetters = Array.from(document.getElementsByClassName("pismeno"));
+
+    setTimeout(() => {
+      Array.from(allLetters).forEach((letter, index) => {
+        setTimeout(() => {
+          letter.classList.toggle("show");
+        }, index * 170);
+      });
+    }, 1000);
+  };
+
+  useEffect(() => {
+    if (dataFetchedRef.current) return;
+    dataFetchedRef.current = true;
+    addShowClassToLetters();
+  }, []);
+
+  const handleTagSelect = (event: any, selectedTags: any) => {
+    const updatedPickerTags = pickerTags.map((tag: PickerTagTypes) => ({ ...tag, selected: selectedTags.some((selectedTag: PickerTagTypes) => selectedTag.title === tag.title) }));
+    setPickerTags(updatedPickerTags)
+    setSelectedTags(selectedTags);
   };
 
   const filteredProjects = projects.filter((project: ProjectTypes) =>
@@ -213,31 +213,29 @@ function MyWork() {
         </h2>
       </div>
 
-      <div>
-        <Autocomplete
-          className="multiPicker"
-          multiple
-          id="checkboxes-tags-demo"
-          options={pickerTags}
-          disableCloseOnSelect
-          getOptionLabel={(option) => option.title}
-          onChange={handleTagSelect}
-          renderOption={(props, option, { selected }) => (
-            <li {...props}>
-              <Checkbox
-                icon={icon}
-                checkedIcon={checkedIcon}
-                style={{ marginRight: 8 }}
-                checked={selected}
-              />
-              {option.title}
-            </li>
-          )}
-          renderInput={(params) => (
-            <TextField {...params} className="input" label="Specify project" />
-          )}
-        />
-      </div>
+      <Autocomplete
+        className="multiPicker"
+        multiple
+        id="checkboxes-tags-demo"
+        options={pickerTags}
+        disableCloseOnSelect
+        getOptionLabel={(option) => option.title}
+        onChange={handleTagSelect}
+        renderOption={(props, option) => (
+          <li {...props}>
+            <Checkbox
+              icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+              checkedIcon={<CheckBoxIcon fontSize="small" />}
+              style={{ marginRight: 8 }}
+              checked={option.selected}
+            />
+            {option.title}
+          </li>
+        )}
+        renderInput={(params) => (
+          <TextField {...params} className="input" label="Specify project" />
+        )}
+      />
 
       <div className="gallery">
         {filteredProjects.map((project: ProjectTypes, index: number) => (
@@ -253,66 +251,6 @@ function MyWork() {
             tags={project.tags}
           />
         ))}
-        {/* <Project
-          direction="left"
-          title="TeeBase"
-          problem="Students on college struggle to find a platform that will enable them to easily draw and share their notes or research"
-          solution="Built a react application that will enable students to saving their notes and share it with other students"
-          imgPath={teebase}
-          childrenPhotos={[teebase_1, teebase_2, teebase_3, teebase_4, teebase_5, teebase_6, teebase_7]}
-          childrenDescription={["Login", "Registration", "Dashboard", "Drawing", "Adding notes", "Map", "Profile"]}
-          tags={["React", "Redux", "Typescript", "NodeJS", "Express", "MongoDB", "JWT", "Bcrypt", "Mui"]}
-        />
-        <Project
-          direction="right"
-          title="Domis Therapy"
-          problem="Nigerian businesses across all sectors especially SME's struggle to comply with company legal regulations."
-          solution="Built a platform that will enable these companies at the tap of a button know what regulations apply to their incorporated company without having to afford a lawyer."
-          imgPath={domis_therapy}
-          childrenPhotos={[domis_therapy_1, domis_therapy_2, domis_therapy_3, domis_therapy_4, domis_therapy_5, domis_therapy_6, domis_therapy_7]}
-          childrenDescription={["Home", "Klasická masáž", "Maderoterapia tela", "Maderoterapia tváre", "Brazílska maderoterapia", "Kontakt", "Recenzie"]}
-          tags={["React", "Bootstrap"]}
-        />
-        <Project
-          direction="left"
-          title="Dobromed"
-          problem="Nigerian businesses across all sectors especially SME's struggle to comply with company legal regulations."
-          solution="Built a platform that will enable these companies at the tap of a button know what regulations apply to their incorporated company without having to afford a lawyer."
-          imgPath={dobromed}
-          childrenPhotos={[dobromed_1, dobromed_2, dobromed_3, dobromed_4, dobromed_5, dobromed_6]}
-          childrenDescription={["Home", "Ubytovanie", "Včelárstvo", "Agroslužby", "Rez", "Kontakt"]}
-          tags={["Wordpress", "Elementor"]}
-        />
-        <Project
-          direction="right"
-          title="Misekova"
-          problem="Nigerian businesses across all sectors especially SME's struggle to comply with company legal regulations."
-          solution="Built a platform that will enable these companies at the tap of a button know what regulations apply to their incorporated company without having to afford a lawyer."
-          imgPath={misekova}
-          childrenPhotos={[misekova_1, misekova_2, misekova_3, misekova_4]}
-          childrenDescription={["Home", "Služby", "Blog", "Kontakt"]}
-          tags={["Wordpress", "Elementor"]}
-        />
-        <Project
-          direction="left"
-          title="Gym Mshop"
-          problem="Nigerian businesses across all sectors especially SME's struggle to comply with company legal regulations."
-          solution="Built a platform that will enable these companies at the tap of a button know what regulations apply to their incorporated company without having to afford a lawyer."
-          imgPath={gym_mshop}
-          childrenPhotos={[]}
-          childrenDescription={[]}
-          tags={["PHP", "Html", "CSS", "JavaScript", "MySQL"]}
-        />
-        <Project
-          direction="right"
-          title="Miroslav Web Dev"
-          problem="Nigerian businesses across all sectors especially SME's struggle to comply with company legal regulations."
-          solution="Built a platform that will enable these companies at the tap of a button know what regulations apply to their incorporated company without having to afford a lawyer."
-          imgPath={miroslav_web_dev}
-          childrenPhotos={[miroslav_web_dev_1, miroslav_web_dev_2, miroslav_web_dev_3, miroslav_web_dev_4]}
-          childrenDescription={["Home", "About", "Portfolio", "Skills"]}
-          tags={["PHP", "Html", "CSS", "JavaScript", "MySQL"]}
-        />*/}
       </div>
     </motion.div>
   );
