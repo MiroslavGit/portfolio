@@ -17,7 +17,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogActions from '@mui/material/DialogActions';
 import DialogTitle from '@mui/material/DialogTitle';
 
-import * as actions from '../actions/actions';
+import * as utils from '../utils/mailUtils';
 
 import "./Connect.scss";
 
@@ -81,7 +81,7 @@ function Cotact() {
 
     if (validIpnuts) {
       setIsLoading(true);
-      let res = await actions.sendEmail(emailContent);
+      let res = await utils.sendEmail(emailContent);
       setIsLoading(false);
       setResMessage(res.message)
       setIsDialogOpen(true);

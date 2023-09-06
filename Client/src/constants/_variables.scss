@@ -30,6 +30,8 @@ $breakpoint-sm: 576px;
 // Medium devices (tablets, 768px and up)
 $breakpoint-md: 768px;
 // Large devices (desktops, 992px and up)
-$breakpoint-lg: 992px;
+$breakpoint-lg: 1024px;
 // Extra large devices (large desktops, 1200px and up)
-$breakpoint-xl: 1200px;
+$breakpoint-xl: 1280px;
+// 2xl devices (large desktops, 1200px and up, my notebook) -> up devices 24' monitors or higher
+$breakpoint-xl: 1536px;
