@@ -2,13 +2,13 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import "./Card.scss";
 
-type CardProps = {
-    dataImage: string;
-    header: string;
-    content: string;
-};
+// type CardProps = {
+//     dataImage: string;
+//     header: string;
+//     content: string;
+// };
 
-function Card(props: CardProps) {
+function Card(props) {
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
     const [mouseX, setMouseX] = useState(0);
@@ -38,7 +38,7 @@ function Card(props: CardProps) {
         };
     }, []);
 
-    const handleMouseMove = (e: any) => {
+    const handleMouseMove = (e) => {
         const card = cardRef.current;
         if (card) {
             const newMouseX = e.pageX - card.offsetLeft - width * 2;
