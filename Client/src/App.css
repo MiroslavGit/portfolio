@@ -50,6 +50,10 @@ body {
 
 /* Media query for whole app */
 @media only screen and ((min-width: 0px) and (max-width: 768px)) {
+  .logo {
+    margin-left: 55px !important;
+  }
+
   .btn_container {
     top: 0 !important;
     position: relative !important;
@@ -84,6 +88,10 @@ body {
 }
 
 @media only screen and ((min-width: 768px) and (max-width: 1024px)) {
+  .logo {
+    margin-left: 55px !important;
+  }
+
   .btn_container {
     top: 0 !important;
     position: relative !important;
@@ -118,6 +126,10 @@ body {
 }
 
 @media only screen and ((min-width: 1024px) and (max-width: 1536px)) {
+  .logo {
+    margin-left: 55px !important;
+  }
+
   .btn_container {
     top: 0 !important;
     position: relative !important;

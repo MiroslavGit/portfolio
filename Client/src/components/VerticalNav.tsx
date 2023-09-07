@@ -1,17 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
+import Card from "./Card";
+
 import logo from "../assets/logo_1.png";
 import meFeed1 from "../assets/me_feed_1.jpg";
 import meFeed2 from "../assets/me_feed_2.jpg";
 import meFeed3 from "../assets/me_feed_3.jpg";
 import meFeed4 from "../assets/me_feed_4.jpg";
-
-import HeightIcon from '@mui/icons-material/Height';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 import "./verticalNav.scss";
 
@@ -82,56 +78,23 @@ function VerticalNav() {
       >
         <div className="sectionContent">
           <div className="wrapper">
-            <div>
-              <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed1} alt="Miroslav Hanisko" /></a></figure>
+            <div id="app" className="CardContainer">
+              <Card
+                dataImage={meFeed2}
+                header="Frontedn"
+                content="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+              />
+              <Card
+                dataImage={meFeed1}
+                header="Backend"
+                content="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+              />
+              <Card
+                dataImage={meFeed4}
+                header="UI/UX"
+                content="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+              />
             </div>
-            <div>
-              <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed2} alt="Miroslav Hanisko" /></a></figure>
-            </div>
-            <div>
-              <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed3} alt="Miroslav Hanisko" /></a></figure>
-            </div>
-            <div>
-              <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed2} alt="Miroslav Hanisko" /></a></figure>
-            </div>
-            <div>
-              <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed4} alt="Miroslav Hanisko" /></a></figure>
-            </div>
-            <div>
-              <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed1} alt="Miroslav Hanisko" /></a></figure>
-            </div>
-            <div>
-              <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed3} alt="Miroslav Hanisko" /></a></figure>
-            </div>
-            <div>
-              <figure><a href="https://www.instagram.com/p/CbmfAG5syVM/" target="_blank"> <img src={meFeed4} alt="Miroslav Hanisko" /></a></figure>
-            </div>
-            <div className="imageTool">
-            </div>
-            <div className="imageTool">
-              <SwapHorizIcon />
-            </div>
-            <div className="imageTool">
-              <ArrowDownwardIcon />
-            </div >
-            <div className="imageTool">
-              <HeightIcon />
-            </div>
-            <div className="imageTool">
-              <ArrowBackIcon />
-            </div>
-            <div className="imageTool">
-              <ArrowDownwardIcon />
-            </div>
-            <div className="imageTool">
-              <ArrowUpwardIcon />
-            </div >
-            <div className="imageTool">
-              <SwapHorizIcon />
-            </div>
-            <div className="imageTool">
-            </div>
-
           </div>
         </div>
       </section >
